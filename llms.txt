@@ -1,0 +1,9 @@
+# BidEyes
+> BidEyes is an AI pre-bid risk review tool for commercial electrical contractors, built on Anthropic Claude.
+
+## Docs
+- [How it works](https://hvax.dev/#how-we-build)
+- [Sample Reports](https://hvax.dev/#reports)
+
+## API & Integration
+BidEyes currently operates as a SaaS platform. We utilize the Anthropic Claude API for long-context document analysis, cross-referencing ITBs, Division 26 specs, and drawings.

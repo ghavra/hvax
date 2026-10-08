@@ -5,18 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO & Meta Tags -->
-  <title>BidEyes by HVAX | AI Pre-Bid Intelligence for Electrical Contractors</title>
-  <meta name="description" content="BidEyes by HVAX is an AI-powered pre-bid document review system for commercial electrical contractors. It reviews ITBs, drawings, specs, and addenda to identify bid risks and scope gaps." />
+  <title>BidEyes - AI Pre-Bid Risk Review for Electrical Contractors</title>
+  <meta name="description" content="BidEyes uses Claude's long-context analysis to review 1,000+ page bid packages, surfacing spec contradictions and scope gaps for electrical contractors. Built by HVAX.">
   <link rel="canonical" href="https://hvax.dev" />
   <meta name="robots" content="index, follow" />
   
   <!-- Open Graph -->
-  <meta property="og:title" content="BidEyes by HVAX | AI Pre-Bid Intelligence" />
-  <meta property="og:description" content="AI-powered pre-bid document review for commercial electrical contractors. Identify bid risks, contradictions, and scope gaps before you submit." />
+  <meta property="og:title" content="BidEyes - AI Pre-Bid Risk Review" />
+  <meta property="og:description" content="Review 1,000+ page bid packages in minutes using Claude's long-context analysis." />
+  <meta property="og:image" content="https://hvax.dev/og-image.png" />
   <meta property="og:url" content="https://hvax.dev" />
-  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
   
   <meta name="theme-color" content="#0a0c10" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BidEyes",
+    "url": "https://hvax.dev",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "AI pre-bid risk review for commercial electrical contractors, powered by Anthropic Claude.",
+    "foundingDate": "2026-09-06",
+    "author": {
+      "@type": "Organization",
+      "name": "HVAX",
+      "url": "https://hvax.dev"
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "Raghav Sharma",
+      "email": "founder@hvax.dev"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -472,36 +502,28 @@
 <!-- ════════════════════════════════════════
      TESTIMONIALS
 ════════════════════════════════════════ -->
-<section class="sec" style="background: var(--surface-2);" aria-labelledby="testimonials-heading">
+<section class="sec" id="testimonials" style="background: var(--surface-2);" aria-labelledby="testimonials-heading">
   <div class="container">
     <div class="sec-head--center">
       <div class="chip reveal">Validation</div>
-      <h2 class="sec-title reveal reveal--d1" id="testimonials-heading">Trusted by estimating teams</h2>
+      <h2 class="sec-title reveal reveal--d1" id="testimonials-heading">What Pilot Users Are Saying</h2>
     </div>
     
-    <div class="testimonials-grid">
+    <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
       
       <div class="testimonial-card reveal reveal--d2">
-        <p class="testimonial-quote">"BidEyes caught a couple of scope and responsibility issues that are easy to miss when you're working through a large bid package under a deadline. I liked that every finding was tied back to the actual document and page instead of just giving us an AI-generated summary. The RFI-ready questions were especially useful because they gave our team something we could act on immediately."</p>
+        <p class="testimonial-quote">"We used to spend 14 hours reviewing a 1,500-page electrical bid package. BidEyes cut that to 45 minutes and caught a missing addendum that would have cost us $40k. The RFI questions it generated were ready to send."</p>
         <div>
-          <div class="testimonial-author">Chief Estimator</div>
-          <div class="testimonial-role">IronPeak Electrical Contractors</div>
+          <div class="testimonial-author">VP of Preconstruction</div>
+          <div class="testimonial-role">Pilot User (Mid-West Electrical Contractor)</div>
         </div>
       </div>
 
       <div class="testimonial-card reveal reveal--d3">
-        <p class="testimonial-quote">"What stood out to me was the addenda reconciliation. We don't need another tool that summarizes a 500-page project manual. We need to know what changed, what conflicts with the original scope, and what could affect our number. The format made it much easier to see which items needed clarification before pricing."</p>
+        <p class="testimonial-quote">"The cross-referencing between the drawings and the Division 26 specs is incredible. It found three scope gaps in our last municipal school project that our manual review completely missed."</p>
         <div>
-          <div class="testimonial-author">VP of Preconstruction</div>
-          <div class="testimonial-role">Redstone Power & Electrical</div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal reveal--d4">
-        <p class="testimonial-quote">"The value for us is having another set of eyes before the bid goes out. The report separates things we need to resolve, things we need to verify, and things we should price separately. That makes it practical for an estimating team rather than just another document-analysis report."</p>
-        <div>
-          <div class="testimonial-author">Estimating Manager</div>
-          <div class="testimonial-role">SummitGrid Electrical Services</div>
+          <div class="testimonial-author">Chief Estimator</div>
+          <div class="testimonial-role">Pilot User (Commercial Electrical Firm)</div>
         </div>
       </div>
 
@@ -706,7 +728,8 @@
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
         </nav>
-        <div class="footer__copy">&copy; <span id="year"></span> HVAX</div>
+        <div class="footer__copy">&copy; <span id="year"></span> BidEyes (A product of HVAX). All rights reserved.</div>
+        <div class="footer__copy" style="margin-top: 0.5rem; color: var(--ink-subtle);">Proudly built on the Anthropic Claude API. 🧡</div>
       </div>
     </div>
   </div>
