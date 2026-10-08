@@ -83,7 +83,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-  <link rel="icon" type="image/png" href="assets/logo.png" /><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='13' fill='white'>HX</text></svg>" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
 
@@ -94,10 +94,13 @@
   <div class="container">
     <div class="nav__inner">
 
-      <a href="#" class="nav__logo" aria-label="HVAX home">
-        <span class="nav__wordmark">HVAX</span>
-        <span class="nav__sep" aria-hidden="true"></span>
-        <span class="nav__product">BidEyes</span>
+      <a href="#" class="nav__logo" aria-label="HVAX home" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none;">
+        <img src="assets/logo.png" alt="HVAX Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" />
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">HVAX</span>
+          <span style="color: var(--border-light); font-size: 1.1rem; font-weight: 300;">|</span>
+          <span style="font-size: 1.25rem; font-weight: 600; color: var(--accent);">BidEyes</span>
+        </div>
       </a>
 
             <ul class="nav__links" role="list">
