@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Meta Tags -->
+  <title>BidEyes by HVAX | AI Pre-Bid Intelligence for Electrical Contractors</title>
+  <meta name="description" content="BidEyes by HVAX is an AI-powered pre-bid document review system for commercial electrical contractors. It reviews ITBs, drawings, specs, and addenda to identify bid risks and scope gaps." />
+  <link rel="canonical" href="https://hvax.dev" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="BidEyes by HVAX | AI Pre-Bid Intelligence" />
+  <meta property="og:description" content="AI-powered pre-bid document review for commercial electrical contractors. Identify bid risks, contradictions, and scope gaps before you submit." />
+  <meta property="og:url" content="https://hvax.dev" />
+  <meta property="og:type" content="website" />
+  
+  <meta name="theme-color" content="#0a0c10" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231a56db'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='13' fill='white'>HX</text></svg>" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAV
+════════════════════════════════════════ -->
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+
+      <a href="#" class="nav__logo" aria-label="HVAX home">
+        <span class="nav__wordmark">HVAX</span>
+        <span class="nav__sep" aria-hidden="true"></span>
+        <span class="nav__product">BidEyes</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#problem">The Problem</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#finds">Coverage</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#for-who">Who It's For</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="mailto:founder@hvax.dev" class="btn btn--ghost">Contact</a>
+        <button class="btn btn--primary" id="nav-cta" aria-haspopup="dialog">Request a Sample</button>
+      </div>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile-menu" id="mobile-menu" role="menu">
+      <a href="#problem" role="menuitem">The Problem</a>
+      <a href="#product" role="menuitem">Product</a>
+      <a href="#finds" role="menuitem">Coverage</a>
+      <a href="#how" role="menuitem">How It Works</a>
+      <a href="#for-who" role="menuitem">Who It's For</a>
+      <button class="btn btn--primary nav__mobile-btn mobile-cta" aria-haspopup="dialog">Request a Sample Review</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero__inner">
+
+      <div class="hero__eyebrow">
+        <span class="live-dot" aria-hidden="true"></span>
+        HVAX &nbsp;·&nbsp; BidEyes
+      </div>
+
+      <h1 class="hero__headline">
+        AI-powered pre-bid intelligence for commercial electrical contractors
+      </h1>
+
+      <p class="hero__sub">
+        BidEyes acts as a second set of eyes for estimators. It reviews ITBs, drawings, specifications, addenda, and alternates to surface bid risks, contradictions, and missing requirements before a bid goes out.
+      </p>
+
+      <div class="hero__cta-row">
+        <button class="btn btn--primary btn--xl" id="hero-cta" aria-haspopup="dialog">
+          Request a Sample Review
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="#how" class="btn btn--ghost btn--xl">See how it works</a>
+      </div>
+
+      <p class="hero__footnote">Built for commercial electrical estimators and preconstruction teams.</p>
+
+      <!-- BidEyes UI Preview Card -->
+      <div class="hero__preview" aria-hidden="true">
+        <div class="review-card" role="img" aria-label="Example BidEyes findings report">
+          <div class="review-card__header">
+            <div class="rc-dots"><span></span><span></span><span></span></div>
+            <span class="rc-title">BidEyes — Pre-Bid Review &nbsp;·&nbsp; Division 26 Electrical</span>
+          </div>
+
+          <div class="review-card__body">
+            <!-- Left: skeleton document -->
+            <div class="doc-pane">
+              <div class="pane-label">Source Documents</div>
+              <div class="doc-skeleton">
+                <div class="sk-line sk-line--plain" style="width:88%"></div>
+                <div class="sk-line sk-line--plain" style="width:72%"></div>
+                <div class="sk-line sk-line--blue"  style="width:83%"></div>
+                <div class="sk-line sk-line--blue"  style="width:58%"></div>
+                <div class="sk-line sk-line--plain" style="width:94%"></div>
+                <div class="sk-line sk-line--amber" style="width:77%"></div>
+                <div class="sk-line sk-line--plain" style="width:66%"></div>
+                <div class="sk-line sk-line--plain" style="width:90%"></div>
+                <div class="sk-line sk-line--blue"  style="width:74%"></div>
+                <div class="sk-line sk-line--plain" style="width:52%"></div>
+                <div class="sk-line sk-line--amber" style="width:88%"></div>
+                <div class="sk-line sk-line--plain" style="width:79%"></div>
+              </div>
+            </div>
+
+            <!-- Right: findings -->
+            <div class="findings-pane">
+              <div class="pane-label">Findings &nbsp;(<span id="finding-count">4</span>)</div>
+              <div class="findings-list">
+
+                <div class="fi fi--red" style="animation-delay:0.25s">
+                  <div class="fi__badge fi__badge--red">⚠</div>
+                  <div class="fi__body">
+                    <div class="fi__title">Bid Risk — Spec/Drawing Conflict</div>
+                    <div class="fi__desc">Spec 26 05 19 requires 90°C conductors; E-drawings note 75°C terminations. Derating may be required.</div>
+                  </div>
+                </div>
+
+                <div class="fi fi--amber" style="animation-delay:0.45s">
+                  <div class="fi__badge fi__badge--amber">?</div>
+                  <div class="fi__body">
+                    <div class="fi__title">Missing Requirement — Div. 28 Interface</div>
+                    <div class="fi__desc">ITB references FACP interface but Division 28 scope is absent from bid documents.</div>
+                  </div>
+                </div>
+
+                <div class="fi fi--teal" style="animation-delay:0.65s">
+                  <div class="fi__badge" style="background:#ccfbf1; color:#0f766e;">🔍</div>
+                  <div class="fi__body">
+                    <div class="fi__title">Item to Investigate — Addendum 2</div>
+                    <div class="fi__desc">LP-3A load increased. Verify feeder sizing and update material takeoff accordingly.</div>
+                  </div>
+                </div>
+
+                <div class="fi fi--blue" style="animation-delay:0.85s">
+                  <div class="fi__badge fi__badge--blue">📌</div>
+                  <div class="fi__body">
+                    <div class="fi__title">Potential RFI — Generator Connection</div>
+                    <div class="fi__desc">Connection point and switchover scope unspecified. Recommend issuing RFI before bid submission.</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /hero__preview -->
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     PROBLEM
+════════════════════════════════════════ -->
+<section class="problem sec" id="problem" aria-labelledby="problem-heading">
+  <div class="container">
+
+    <div class="sec-head--center">
+      <div class="chip chip--dark reveal">The Problem</div>
+      <h2 class="sec-title reveal reveal--d1" id="problem-heading">
+        Bid windows are short.<br />Document sets aren't.
+      </h2>
+      <p class="sec-sub reveal reveal--d2">
+        Commercial electrical estimators work under real pressure. Thorough document review competes with takeoff and pricing time — and review almost always loses.
+      </p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="problem-card__num">01</div>
+        <h3>Volume you can't read end-to-end</h3>
+        <p>A single commercial bid can span hundreds of pages across drawings, specs, addenda, alternates, and supplemental documents. Reading everything is not a realistic option.</p>
+      </div>
+
+      <div class="problem-card reveal reveal--d1">
+        <div class="problem-card__num">02</div>
+        <h3>Contradictions across documents</h3>
+        <p>Specs say one thing. Drawings say another. Addenda change something that wasn't updated elsewhere. These contradictions surface as disputes — or worse, unbilled work — after award.</p>
+      </div>
+
+      <div class="problem-card reveal reveal--d2">
+        <div class="problem-card__num">03</div>
+        <h3>Scope that isn't clearly defined</h3>
+        <p>Vague interface language, undefined responsibilities between divisions, and unlisted equipment leave estimators guessing — and often underbidding work they'll be held to.</p>
+      </div>
+
+      <div class="problem-card reveal reveal--d3">
+        <div class="problem-card__num">04</div>
+        <h3>Late addenda buried in the stack</h3>
+        <p>Addenda arrive after most of the estimate is built. A missed panel schedule revision or scope clarification can shift the job significantly and go unpriced.</p>
+      </div>
+
+      <div class="problem-card reveal reveal--d4">
+        <div class="problem-card__num">05</div>
+        <h3>Multiple bids, compressed timelines</h3>
+        <p>Estimators are managing several active bids simultaneously. There's no slack in the schedule for a second, methodical pass through every document in a package.</p>
+      </div>
+
+      <div class="problem-card reveal reveal--d5">
+        <div class="problem-card__num">06</div>
+        <h3>One miss becomes a margin problem</h3>
+        <p>A single missed requirement — a fire alarm interface, a temporary power obligation, an undefined commissioning scope — can cost more to address post-award than it would have cost to price correctly.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     PRODUCT
+════════════════════════════════════════ -->
+<section class="product sec" id="product" aria-labelledby="product-heading">
+  <div class="container">
+    <div class="product__inner">
+
+      <!-- Left: feature grid -->
+      <div class="product__visual reveal">
+        <div class="product-features">
+          <div class="pf-card">
+            <div class="pf-card__icon" style="background:#dbeafe" aria-hidden="true">📑</div>
+            <h4>Cross-document review</h4>
+            <p>Reads across your full document set — not one file at a time — to surface inconsistencies that a single-document read would miss.</p>
+          </div>
+          <div class="pf-card">
+            <div class="pf-card__icon" style="background:#fef3c7" aria-hidden="true">⚡</div>
+            <h4>Commercial electrical context</h4>
+            <p>Understands Division 26 language, NEC requirements, switchgear, panel schedules, conduit systems, and bid document conventions.</p>
+          </div>
+          <div class="pf-card">
+            <div class="pf-card__icon" style="background:#ede9fe" aria-hidden="true">🎯</div>
+            <h4>Structured findings</h4>
+            <p>Findings organized by type and severity — not buried in a wall of text. Each entry tells you what was found, where, and why it matters.</p>
+          </div>
+          <div class="pf-card">
+            <div class="pf-card__icon" style="background:#d1fae5" aria-hidden="true">⏱</div>
+            <h4>Fits your existing process</h4>
+            <p>Designed for estimators who are already short on time. Integrates naturally without requiring a new, complex workflow.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: copy -->
+      <div class="product__copy reveal reveal--d1">
+        <div class="chip">BidEyes by HVAX</div>
+        <h2 class="sec-title" id="product-heading">
+          A second set of eyes on every bid package
+        </h2>
+        <p style="font-size: var(--text-base); color: var(--ink-muted); line-height: 1.7;">
+          BidEyes is purpose-built for commercial electrical contractors. Before a bid goes out, it works through your document package and surfaces the things that matter — the risks you didn't have time to find, the spec-drawing conflict buried on page 47, the addendum change that just shifted your scope.
+        </p>
+
+        <ul class="product__list" role="list">
+          <li>
+            <span class="li-check" aria-hidden="true">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#1a56db" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l2.5 2.5 4.5-4.5"/></svg>
+            </span>
+            Reviews ITBs, drawings, specifications, addenda, alternates, and scope requirements
+          </li>
+          <li>
+            <span class="li-check" aria-hidden="true">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#1a56db" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l2.5 2.5 4.5-4.5"/></svg>
+            </span>
+            Surfaces contradictions between documents — not just within them
+          </li>
+          <li>
+            <span class="li-check" aria-hidden="true">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#1a56db" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l2.5 2.5 4.5-4.5"/></svg>
+            </span>
+            Identifies scope gaps, missing requirements, and undefined interfaces
+          </li>
+          <li>
+            <span class="li-check" aria-hidden="true">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#1a56db" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l2.5 2.5 4.5-4.5"/></svg>
+            </span>
+            Flags critical items requiring estimator investigation
+          </li>
+          <li>
+            <span class="li-check" aria-hidden="true">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#1a56db" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l2.5 2.5 4.5-4.5"/></svg>
+            </span>
+            Recommends potential RFIs before submission
+          </li>
+        </ul>
+
+        <div>
+          <button class="btn btn--primary btn--lg" id="product-cta" aria-haspopup="dialog">
+            Request a Sample Review
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     WHAT BIDEYES FINDS
+════════════════════════════════════════ -->
+<section class="finds sec" id="finds" aria-labelledby="finds-heading">
+  <div class="container">
+
+    <div class="sec-head--center">
+      <div class="chip reveal">Coverage</div>
+      <h2 class="sec-title reveal reveal--d1" id="finds-heading">What BidEyes surfaces</h2>
+      <p class="sec-sub reveal reveal--d2">
+        Six categories of issues that most often create bid risk, scope disputes, or unbilled work on commercial electrical projects.
+      </p>
+    </div>
+
+    <div class="finds-grid">
+
+      <div class="find-card reveal" data-c="red">
+        <div class="find-card__icon" aria-hidden="true">⚠️</div>
+        <h3>Bid Risks</h3>
+        <p>Liquidated damages, broad indemnification, undefined scope ownership, or one-sided responsibility transfer — conditions that create financial exposure before you've even started the job.</p>
+      </div>
+
+      <div class="find-card reveal reveal--d1" data-c="amber">
+        <div class="find-card__icon" aria-hidden="true">🔀</div>
+        <h3>Contradictions</h3>
+        <p>Conflicts between specifications, drawings, addenda, and the ITB — wire sizes, equipment ratings, installation methods, or scope boundaries that don't agree across documents.</p>
+      </div>
+
+      <div class="find-card reveal reveal--d2" data-c="blue">
+        <div class="find-card__icon" aria-hidden="true">📭</div>
+        <h3>Missing Requirements</h3>
+        <p>Referenced work that isn't fully specified: commissioning, spare parts, submittals, testing and inspection, temporary power, startup services — scope that exists in the documents but not in the spec.</p>
+      </div>
+
+      <div class="find-card reveal reveal--d3" data-c="purple">
+        <div class="find-card__icon" aria-hidden="true">🕳</div>
+        <h3>Scope Gaps</h3>
+        <p>Interface work between divisions, unassigned coordination responsibilities, and equipment furnished by others with no installation scope defined — the grey areas estimators have to guess at.</p>
+      </div>
+
+      <div class="find-card reveal reveal--d4" data-c="teal">
+        <div class="find-card__icon" aria-hidden="true">🔍</div>
+        <h3>Items to Investigate</h3>
+        <p>Ambiguities, major addenda changes, complex notes, or unusual material requirements that warrant an estimator's direct attention, judgment, and manual review.</p>
+      </div>
+
+      <div class="find-card reveal reveal--d5" data-c="green">
+        <div class="find-card__icon" aria-hidden="true">📌</div>
+        <h3>Potential RFIs</h3>
+        <p>Design gaps, unresolved coordination issues, and ambiguities where a clarification before submission reduces your risk — identified and ready to issue before the bid goes out.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════ -->
+<section class="how sec" id="how" aria-labelledby="how-heading">
+  <div class="container">
+
+    <div class="sec-head--center">
+      <div class="chip chip--dark reveal">Process</div>
+      <h2 class="sec-title reveal reveal--d1" id="how-heading">How it works</h2>
+      <p class="sec-sub reveal reveal--d2">
+        Four steps. Fits into your existing bid process without adding a new tool to learn or a new workflow to manage.
+      </p>
+    </div>
+
+    <div class="how-steps">
+
+      <div class="how-step reveal">
+        <div class="how-step__num">1</div>
+        <h3>Upload</h3>
+        <p>Send your full bid package — ITB, drawings, specs, addenda, alternates — directly to BidEyes.</p>
+      </div>
+
+      <div class="how-step reveal reveal--d1">
+        <div class="how-step__num">2</div>
+        <h3>Analyze</h3>
+        <p>BidEyes reads across your complete document set, cross-referencing every document against every other.</p>
+      </div>
+
+      <div class="how-step reveal reveal--d2">
+        <div class="how-step__num">3</div>
+        <h3>Review</h3>
+        <p>You receive a structured findings report organized by risk type — bid risks, contradictions, gaps, items to investigate, potential RFIs.</p>
+      </div>
+
+      <div class="how-step reveal reveal--d3">
+        <div class="how-step__num">4</div>
+        <h3>Act</h3>
+        <p>Issue RFIs, adjust pricing, clarify exclusions, or walk with confidence. Better information, better decisions.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     WHO IT'S FOR
+════════════════════════════════════════ -->
+<section class="for-who sec" id="for-who" aria-labelledby="for-who-heading">
+  <div class="container">
+    <div class="for-who__inner">
+
+      <!-- Left: copy + roles -->
+      <div class="for-who__copy reveal">
+        <div class="chip">Built for</div>
+        <h2 class="sec-title" id="for-who-heading">
+          Commercial electrical estimators and preconstruction teams
+        </h2>
+        <p style="font-size: var(--text-base); color: var(--ink-muted); line-height: 1.7;">
+          BidEyes is purpose-built for the people who live in bid documents. If you're estimating commercial electrical work — ground-up, tenant improvement, healthcare, industrial, or design-build — this is built for your risk and your workflow.
+        </p>
+
+        <div class="roles-list">
+          <div class="role-item">
+            <div class="role-item__icon" aria-hidden="true">🧮</div>
+            <div>
+              <h4>Lead Estimators</h4>
+              <p>Managing multiple active bids, responsible for accuracy and completeness on every package that goes out.</p>
+            </div>
+          </div>
+          <div class="role-item">
+            <div class="role-item__icon" aria-hidden="true">📐</div>
+            <div>
+              <h4>Preconstruction Managers</h4>
+              <p>Overseeing bid quality and risk exposure across the full project pipeline, not just individual bids.</p>
+            </div>
+          </div>
+          <div class="role-item">
+            <div class="role-item__icon" aria-hidden="true">🏗</div>
+            <div>
+              <h4>Electrical Contractors</h4>
+              <p>Commercial, industrial, and specialty contractors bidding competitively where a missed item is a real problem.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: document types + what you get -->
+      <div class="for-who__detail reveal reveal--d1">
+
+        <div class="detail-block">
+          <div class="detail-block__head">Document types reviewed</div>
+          <div class="detail-block__body">
+            <div class="tag-cloud">
+              <span class="tag tag--on">Invitations to Bid</span>
+              <span class="tag tag--on">Electrical Drawings</span>
+              <span class="tag tag--on">Div. 26 Specifications</span>
+              <span class="tag tag--on">Addenda</span>
+              <span class="tag tag--on">Bid Alternates</span>
+              <span class="tag tag--on">Related Specifications</span>
+              <span class="tag tag--on">Scope Requirements</span>
+              <span class="tag">RFP Documents</span>
+              <span class="tag">Owner Requirements</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block__head">Project types</div>
+          <div class="detail-block__body">
+            <div class="tag-cloud">
+              <span class="tag tag--on">Commercial Office</span>
+              <span class="tag tag--on">Healthcare</span>
+              <span class="tag tag--on">Industrial</span>
+              <span class="tag tag--on">Data Centers</span>
+              <span class="tag">K–12 Education</span>
+              <span class="tag">Higher Education</span>
+              <span class="tag">Tenant Improvement</span>
+              <span class="tag">Design-Build</span>
+              <span class="tag">Municipal</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     FINAL CTA
+════════════════════════════════════════ -->
+<section class="final-cta sec--sm" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="final-cta__inner">
+      <div class="chip reveal">Get started</div>
+      <h2 class="sec-title reveal reveal--d1" id="cta-heading">
+        See what's in your<br />next bid package
+      </h2>
+      <p class="sec-sub reveal reveal--d2" style="font-size: var(--text-base);">
+        Send us a real bid document set and we'll run a sample review — no commitment, no sales call required. Just a clearer picture of what's in the documents before you submit.
+      </p>
+      <button class="btn btn--primary btn--xl reveal reveal--d3" id="final-cta" aria-haspopup="dialog">
+        Request a Sample Review
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <p class="final-cta__note reveal reveal--d4">
+        Questions? Email <a href="mailto:founder@hvax.dev">founder@hvax.dev</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <div class="footer__wordmark">HVAX</div>
+        <div class="footer__byline">BidEyes — AI Pre-Bid Document Review</div>
+        
+        <div class="footer__about">
+          <p>HVAX builds AI-native tools for difficult, information-heavy business workflows.<br/>BidEyes is our first product, designed specifically for commercial preconstruction.</p>
+        </div>
+      </div>
+      
+      <div class="footer__right">
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="mailto:founder@hvax.dev">founder@hvax.dev</a>
+          <a href="#problem">The Problem</a>
+          <a href="#product">BidEyes</a>
+          <a href="#how">How It Works</a>
+        </nav>
+        <div class="footer__copy">&copy; <span id="year"></span> HVAX</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════
+     MODAL
+════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <button class="modal__close" id="modal-close" aria-label="Close">&times;</button>
+
+    <!-- Form state -->
+    <div id="modal-form-state">
+      <div class="chip modal__chip">Request a Sample Review</div>
+      <h2 id="modal-title">Get BidEyes on a real bid package</h2>
+      <p class="modal__desc">Send us a set of bid documents and we'll show you exactly what BidEyes finds. No commitment required.</p>
+
+      <form id="sample-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-name">Your name</label>
+            <input class="form-input" type="text" id="f-name" name="name" placeholder="Jane Smith" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-company">Company</label>
+            <input class="form-input" type="text" id="f-company" name="company" placeholder="Acme Electric" autocomplete="organization" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-email">Work email</label>
+          <input class="form-input" type="email" id="f-email" name="email" placeholder="you@company.com" autocomplete="email" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-role">Your role</label>
+          <select class="form-select" id="f-role" name="role" required>
+            <option value="">Select your role</option>
+            <option value="lead-estimator">Lead Estimator</option>
+            <option value="estimator">Estimator</option>
+            <option value="preconstruction-manager">Preconstruction Manager</option>
+            <option value="vp-preconstruction">VP of Preconstruction</option>
+            <option value="owner-principal">Owner / Principal</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-notes">
+            Anything we should know?
+            <span class="form-opt">(optional)</span>
+          </label>
+          <textarea class="form-textarea" id="f-notes" name="notes" placeholder="Project type, document count, specific concerns…" rows="2"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg form-submit" id="form-submit-btn">
+          Submit Request
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Success state -->
+    <div class="form-success" id="form-success" aria-live="polite">
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h3>Request prepared</h3>
+      <p>We've opened your email client to send the request to <strong>founder@hvax.dev</strong>. We'll reply within one business day.</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
