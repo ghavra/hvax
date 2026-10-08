@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | HVAX</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <title>Privacy Policy | BidEyes by HVAX</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
   <nav class="nav" id="nav">
@@ -17,6 +15,11 @@
           <span class="nav__wordmark" style="font-size: 1.25rem;">BidEyes</span>
           <span style="font-size: 0.75rem; color: var(--ink-muted); font-weight: 500;">by HVAX</span>
         </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html#product">Product</a></li>
+          <li><a href="technology.html">Built on Claude</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
         <div class="nav__actions">
           <a href="index.html" class="btn btn--ghost">Back to Home</a>
         </div>
@@ -24,24 +27,35 @@
     </div>
   </nav>
 
-  <section class="sec" style="padding-top: 120px;">
+  <section class="sec" style="padding-top: 140px;">
     <div class="container" style="max-width: 800px;">
       <h1 class="sec-title">Privacy Policy</h1>
       <p class="sec-sub">Last updated: October 2026</p>
       
-      <div style="color: var(--ink-muted); line-height: 1.7; margin-top: var(--s-8);">
-        
-        <h3>Data Handling</h3>
-        <p>BidEyes processes confidential bid documents. Documents uploaded for analysis are processed via the Anthropic Claude API. We do not retain your bid documents on our servers longer than 30 days post-processing.</p>
-        
-        <h3>Anthropic's Commercial Terms</h3>
-        <p>As an API customer, Anthropic does not train their models on our customers' proprietary data.</p>
-        
-        <h3>Data Security</h3>
-        <p>All data is encrypted in transit (TLS) and at rest.</p>
+      <div style="color: var(--ink); line-height: 1.7; margin-top: var(--s-8);">
+        <p>This Privacy Policy describes how HVAX ("we", "us", or "our"), the developer of BidEyes, collects, uses, and protects your information. Protecting the confidentiality of your proprietary bid documents is our highest priority.</p>
 
-        <p>Files are stored securely during processing, kept only as long as needed for review, accessible only by authorized personnel, deleted immediately upon request, and an NDA is available.</p>
-        <p>Contact: <a href="mailto:founder@hvax.dev" style="color: var(--accent);">founder@hvax.dev</a></p>
+        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">1. Information We Collect</h3>
+        <p><strong>Account Information:</strong> When you register for BidEyes, we collect your name, email address, company name, and payment information to provide and bill for our services.</p>
+        <p><strong>Bid Documents:</strong> We temporarily ingest the project manuals, drawings, specifications, ITBs, and addenda that you upload to the platform strictly for the purpose of analysis.</p>
+
+        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">2. Document Processing and Third Parties</h3>
+        <p>BidEyes is built on the Anthropic Claude API. When you upload a bid package, the text and visual data are securely transmitted to Anthropic for long-context analysis. <strong>Under Anthropic's Commercial API Terms, Anthropic explicitly does not train their AI models on our customers' proprietary data.</strong> Your bid documents will never be used to improve foundational AI models or shared with other BidEyes customers.</p>
+
+        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">3. Data Retention and Deletion</h3>
+        <p>We do not retain your bid documents longer than necessary to generate your risk reports and allow your estimating team to review the findings. All uploaded bid files and generated reports are automatically purged from our active processing servers 30 days after the project is archived. You may request immediate deletion of a project at any time through the platform interface.</p>
+
+        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">4. Data Security</h3>
+        <p>All data transmitted between your browser, our servers, and the Anthropic API is encrypted in transit using industry-standard TLS. All documents are encrypted at rest using AES-256 encryption. Access to our production infrastructure is strictly restricted to authorized personnel who require access to maintain the platform.</p>
+
+        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">5. Your Rights</h3>
+        <p>Depending on your jurisdiction, you may have the right to access, correct, or delete your personal data. To exercise these rights or request a full export of your account data, please contact us. We also offer standard Non-Disclosure Agreements (NDAs) to all Enterprise and Pro tier customers prior to document upload.</p>
+        
+        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">6. Cookies and Tracking</h3>
+        <p>We use essential cookies to maintain your session and security. We do not use third-party advertising cookies or cross-site tracking pixels on the core BidEyes application.</p>
+
+        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">7. Contact Us</h3>
+        <p>For privacy inquiries, data deletion requests, or to execute an NDA, please contact us at: <a href="mailto:founder@hvax.dev" style="color: var(--accent);">founder@hvax.dev</a></p>
       </div>
     </div>
   </section>

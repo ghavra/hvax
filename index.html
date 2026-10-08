@@ -21,31 +21,61 @@
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "BidEyes",
-    "url": "https://hvax.dev",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "description": "AI pre-bid risk review for commercial electrical contractors, powered by Anthropic Claude.",
-    "foundingDate": "2026-09-06",
-    "author": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
       "@type": "Organization",
+      "@id": "https://hvax.dev/#organization",
       "name": "HVAX",
-      "url": "https://hvax.dev"
+      "alternateName": "BidEyes",
+      "url": "https://hvax.dev",
+      "logo": "https://hvax.dev/assets/raghav.png",
+      "description": "BidEyes is an AI-powered pre-bid risk review tool for commercial electrical contractors. Built on Claude (Anthropic).",
+      "email": "founder@hvax.dev",
+      "foundingDate": "2026-09-06",
+      "founder": {
+        "@type": "Person",
+        "name": "Raghav Sharma"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "founder@hvax.dev"
+      },
+      "knowsAbout": ["Commercial Electrical Estimating", "Preconstruction", "Artificial Intelligence", "Construction Bid Review"],
+      "disambiguatingDescription": "HVAX (developer of BidEyes) is a privately held AI startup founded in 2026 in Jaipur, India. It is not affiliated with the NSE-listed HVAC equipment company HVAX Technologies."
     },
-    "creator": {
-      "@type": "Person",
-      "name": "Raghav Sharma",
-      "email": "founder@hvax.dev"
+    {
+      "@type": "WebSite",
+      "@id": "https://hvax.dev/#website",
+      "url": "https://hvax.dev",
+      "name": "BidEyes by HVAX",
+      "publisher": {
+        "@id": "https://hvax.dev/#organization"
+      }
     },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "IN"
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://hvax.dev/#software",
+      "name": "BidEyes",
+      "url": "https://hvax.dev",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "AI pre-bid risk review for commercial electrical contractors, powered by Anthropic Claude.",
+      "author": {
+        "@id": "https://hvax.dev/#organization"
+      }
     }
-  }
-  </script>
+  ]
+}
+</script>
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,14 +100,12 @@
         <span class="nav__product">BidEyes</span>
       </a>
 
-      <ul class="nav__links" role="list">
-        <li><a href="#problem">The Problem</a></li>
+            <ul class="nav__links" role="list">
         <li><a href="#product">Product</a></li>
-        <li><a href="#finds">Coverage</a></li>
-        <li><a href="#how">How It Works</a>
-          <a href="#pricing">Pricing</a></li>
+        <li><a href="technology.html">Built on Claude</a></li>
+        <li><a href="#how">How It Works</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#for-who">Who It's For</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
 
       <div class="nav__actions">
@@ -475,6 +503,48 @@
 
 
 
+
+<!-- ════════════════════════════════════════
+     CLAUDE INTEGRATION
+════════════════════════════════════════ -->
+<section id="claude-integration" class="sec" style="background: var(--surface-2);" aria-labelledby="claude-heading">
+  <div class="container">
+    <div class="sec-head--center">
+      <div class="chip reveal">Built on Claude</div>
+      <h2 class="sec-title reveal reveal--d1" id="claude-heading">Designed for the Context Window</h2>
+      <p class="sec-sub reveal reveal--d2">We don't use generic AI. BidEyes is natively built on the Anthropic Claude API to leverage its industry-leading long-context document analysis capabilities.</p>
+    </div>
+    
+    <div class="finds-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      
+      <div class="pf-card reveal reveal--d2">
+        <div class="pf-card__icon" aria-hidden="true" style="background: rgba(217,119,87,0.1); color: #d97757;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        </div>
+        <div class="fi__title">Full-Package Reasoning</div>
+        <div class="fi__desc">We feed the entire 1,700-page package—specs, drawings, and addenda—into Claude simultaneously, bypassing RAG fragmentation to catch cross-document contradictions.</div>
+      </div>
+
+      <div class="pf-card reveal reveal--d3">
+        <div class="pf-card__icon" aria-hidden="true" style="background: rgba(217,119,87,0.1); color: #d97757;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        </div>
+        <div class="fi__title">Source-Cited Findings</div>
+        <div class="fi__desc">Claude's faithfulness ensures every flagged risk cites the exact document and page number. No hallucinations, just a direct link for your estimator to verify.</div>
+      </div>
+
+      <div class="pf-card reveal reveal--d4">
+        <div class="pf-card__icon" aria-hidden="true" style="background: rgba(217,119,87,0.1); color: #d97757;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <div class="fi__title">Zero Data Training</div>
+        <div class="fi__desc">Processed via the Anthropic Claude Commercial API. Your proprietary bid documents are never used to train Anthropic's foundational models.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ════════════════════════════════════════
      FOUNDER
 ════════════════════════════════════════ -->
@@ -720,15 +790,17 @@
       
       <div class="footer__right">
         <nav class="footer__links" aria-label="Footer links">
-          <a href="mailto:founder@hvax.dev">founder@hvax.dev</a>
-          <a href="#problem">The Problem</a>
-          <a href="#product">BidEyes</a>
-          <a href="#how">How It Works</a>
+          <a href="about.html">About HVAX</a>
+          <a href="technology.html">Built on Claude</a>
           <a href="#pricing">Pricing</a>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
+          <a href="mailto:founder@hvax.dev">founder@hvax.dev</a>
         </nav>
         <div class="footer__copy">&copy; <span id="year"></span> BidEyes (A product of HVAX). All rights reserved.</div>
+        <div class="footer__copy" style="margin-top: 0.5rem; color: var(--ink-subtle);">
+          HVAX &mdash; founded 2026 &middot; Jaipur, Rajasthan, India
+        </div>
         <div class="footer__copy" style="margin-top: 0.5rem; color: var(--ink-subtle);">Proudly built on the Anthropic Claude API. 🧡</div>
       </div>
     </div>
