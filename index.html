@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO & Meta Tags -->
-  <title>BidEyes - AI Pre-Bid Risk Review for Electrical Contractors</title>
-  <meta name="description" content="BidEyes uses Claude's long-context analysis to review 1,000+ page bid packages, surfacing spec contradictions and scope gaps for electrical contractors. Built by HVAX.">
+  <title>BidEyes - AI-Assisted Pre-Bid Document Review</title>
+  <meta name="description" content="Customers send a bid package and receive a reviewed report identifying potential scope gaps and contradictions. Built by HVAX.">
   <link rel="canonical" href="https://hvax.dev" />
   <meta name="robots" content="index, follow" />
   
@@ -110,8 +110,7 @@
         <li><a href="#product">Product</a></li>
         <li><a href="technology.html">Built on Claude</a></li>
         <li><a href="#how">How It Works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
+                <li><a href="about.html">About</a></li>
       </ul>
 
       <div class="nav__actions">
@@ -466,49 +465,30 @@
 <!-- ════════════════════════════════════════
      HOW IT WORKS
 ════════════════════════════════════════ -->
-<section class="how sec" id="how" aria-labelledby="how-heading">
+<section id="how" class="sec" aria-labelledby="how-heading">
   <div class="container">
-
     <div class="sec-head--center">
-      <div class="chip chip--dark reveal">Process</div>
-      <h2 class="sec-title reveal reveal--d1" id="how-heading">How it works</h2>
-      <p class="sec-sub reveal reveal--d2">
-        Four steps. Fits into your existing bid process without adding a new tool to learn or a new workflow to manage.
-      </p>
+      <h2 class="sec-title reveal" id="how-heading">How it works</h2>
     </div>
-
-    <div class="how-steps">
-
-      <div class="how-step reveal">
-        <div class="how-step__num">1</div>
-        <h3>Upload</h3>
-        <p>Send your full bid package — ITB, drawings, specs, addenda, alternates — directly to BidEyes.</p>
+    <div class="hw-grid">
+      <div class="hw-step reveal reveal--d1">
+        <div class="hw-step__num" aria-hidden="true">1</div>
+        <h3 class="hw-step__title">You send the documents</h3>
+        <p class="hw-step__desc">Email us the bid package documents (specs, drawings, addenda).</p>
       </div>
-
-      <div class="how-step reveal reveal--d1">
-        <div class="how-step__num">2</div>
-        <h3>Analyze</h3>
-        <p>BidEyes reads across your complete document set, cross-referencing every document against every other.</p>
+      <div class="hw-step reveal reveal--d2">
+        <div class="hw-step__num" aria-hidden="true">2</div>
+        <h3 class="hw-step__title">We run the review</h3>
+        <p class="hw-step__desc">Our system (integration currently in build) processes the files to identify potential issues.</p>
       </div>
-
-      <div class="how-step reveal reveal--d2">
-        <div class="how-step__num">3</div>
-        <h3>Review</h3>
-        <p>You receive a structured findings report organized by risk type — bid risks, contradictions, gaps, items to investigate, potential RFIs.</p>
+      <div class="hw-step reveal reveal--d3">
+        <div class="hw-step__num" aria-hidden="true">3</div>
+        <h3 class="hw-step__title">You get the report</h3>
+        <p class="hw-step__desc">A human estimator reviews the findings, and you receive the final report with exact page citations.</p>
       </div>
-
-      <div class="how-step reveal reveal--d3">
-        <div class="how-step__num">4</div>
-        <h3>Act</h3>
-        <p>Issue RFIs, adjust pricing, clarify exclusions, or walk with confidence. Better information, better decisions.</p>
-      </div>
-
     </div>
   </div>
 </section>
-
-
-
 
 <!-- ════════════════════════════════════════
      CLAUDE INTEGRATION
@@ -517,8 +497,8 @@
   <div class="container">
     <div class="sec-head--center">
       <div class="chip reveal">Built on Claude</div>
-      <h2 class="sec-title reveal reveal--d1" id="claude-heading">Designed for the Context Window</h2>
-      <p class="sec-sub reveal reveal--d2">We don't use generic AI. BidEyes is natively built on the Anthropic Claude API to leverage its industry-leading long-context document analysis capabilities.</p>
+      <h2 class="sec-title reveal reveal--d1" id="claude-heading">Designed for Context</h2>
+      <p class="sec-sub reveal reveal--d2">We are building on the Anthropic Claude API for document analysis.</p>
     </div>
     
     <div class="finds-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
@@ -527,8 +507,8 @@
         <div class="pf-card__icon" aria-hidden="true" style="background: rgba(217,119,87,0.1); color: #d97757;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
         </div>
-        <div class="fi__title">Full-Package Reasoning</div>
-        <div class="fi__desc">We feed the entire 1,700-page package—specs, drawings, and addenda—into Claude simultaneously, bypassing RAG fragmentation to catch cross-document contradictions.</div>
+        <div class="fi__title">Document Processing</div>
+        <div class="fi__desc">We process the package—specs, drawings, and addenda—bypassing standard RAG fragmentation to check for contradictions.</div>
       </div>
 
       <div class="pf-card reveal reveal--d3">
@@ -536,7 +516,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
         </div>
         <div class="fi__title">Source-Cited Findings</div>
-        <div class="fi__desc">Claude's faithfulness ensures every flagged risk cites the exact document and page number. No hallucinations, just a direct link for your estimator to verify.</div>
+        <div class="fi__desc">Every flagged risk cites the exact document and page number for your estimator to verify.</div>
       </div>
 
       <div class="pf-card reveal reveal--d4">
@@ -544,9 +524,8 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
         </div>
         <div class="fi__title">Zero Data Training</div>
-        <div class="fi__desc">Processed via the Anthropic Claude Commercial API. Your proprietary bid documents are never used to train Anthropic's foundational models.</div>
+        <div class="fi__desc">Processed via the Anthropic Claude API. Customer bid documents are not used to train Anthropic's foundational models.</div>
       </div>
-
     </div>
   </div>
 </section>
@@ -574,167 +553,6 @@
   </div>
 </section>
 
-
-<!-- ════════════════════════════════════════
-     TESTIMONIALS
-════════════════════════════════════════ -->
-<section class="sec" id="testimonials" style="background: var(--surface-2);" aria-labelledby="testimonials-heading">
-  <div class="container">
-    <div class="sec-head--center">
-      <div class="chip reveal">Validation</div>
-      <h2 class="sec-title reveal reveal--d1" id="testimonials-heading">What Pilot Users Are Saying</h2>
-    </div>
-    
-    <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-      
-      <div class="testimonial-card reveal reveal--d2">
-        <p class="testimonial-quote">"We used to spend 14 hours reviewing a 1,500-page electrical bid package. BidEyes cut that to 45 minutes and caught a missing addendum that would have cost us $40k. The RFI questions it generated were ready to send."</p>
-        <div>
-          <div class="testimonial-author">VP of Preconstruction</div>
-          <div class="testimonial-role">F&W Electrical Contractors, Inc.</div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal reveal--d3">
-        <p class="testimonial-quote">"The cross-referencing between the drawings and the Division 26 specs is incredible. It found three scope gaps in our last municipal school project that our manual review completely missed."</p>
-        <div>
-          <div class="testimonial-author">Chief Estimator</div>
-          <div class="testimonial-role">Core Electrical Group</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════
-     WHO IT'S FOR
-════════════════════════════════════════ -->
-<section class="for-who sec" id="for-who" aria-labelledby="for-who-heading">
-  <div class="container">
-    <div class="for-who__inner">
-
-      <!-- Left: copy + roles -->
-      <div class="for-who__copy reveal">
-        <div class="chip">Built for</div>
-        <h2 class="sec-title" id="for-who-heading">
-          Commercial electrical estimators and preconstruction teams
-        </h2>
-        <p style="font-size: var(--text-base); color: var(--ink-muted); line-height: 1.7;">
-          BidEyes is purpose-built for the people who live in bid documents. If you're estimating commercial electrical work — ground-up, tenant improvement, healthcare, industrial, or design-build — this is built for your risk and your workflow.
-        </p>
-
-        <div class="roles-list">
-          <div class="role-item">
-            <div class="role-item__icon" aria-hidden="true">🧮</div>
-            <div>
-              <h4>Lead Estimators</h4>
-              <p>Managing multiple active bids, responsible for accuracy and completeness on every package that goes out.</p>
-            </div>
-          </div>
-          <div class="role-item">
-            <div class="role-item__icon" aria-hidden="true">📐</div>
-            <div>
-              <h4>Preconstruction Managers</h4>
-              <p>Overseeing bid quality and risk exposure across the full project pipeline, not just individual bids.</p>
-            </div>
-          </div>
-          <div class="role-item">
-            <div class="role-item__icon" aria-hidden="true">🏗</div>
-            <div>
-              <h4>Electrical Contractors</h4>
-              <p>Commercial, industrial, and specialty contractors bidding competitively where a missed item is a real problem.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: document types + what you get -->
-      <div class="for-who__detail reveal reveal--d1">
-
-        <div class="detail-block">
-          <div class="detail-block__head">Document types reviewed</div>
-          <div class="detail-block__body">
-            <div class="tag-cloud">
-              <span class="tag tag--on">Invitations to Bid</span>
-              <span class="tag tag--on">Electrical Drawings</span>
-              <span class="tag tag--on">Div. 26 Specifications</span>
-              <span class="tag tag--on">Addenda</span>
-              <span class="tag tag--on">Bid Alternates</span>
-              <span class="tag tag--on">Related Specifications</span>
-              <span class="tag tag--on">Scope Requirements</span>
-              <span class="tag">RFP Documents</span>
-              <span class="tag">Owner Requirements</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-block">
-          <div class="detail-block__head">Project types</div>
-          <div class="detail-block__body">
-            <div class="tag-cloud">
-              <span class="tag tag--on">Commercial Office</span>
-              <span class="tag tag--on">Healthcare</span>
-              <span class="tag tag--on">Industrial</span>
-              <span class="tag tag--on">Data Centers</span>
-              <span class="tag">K–12 Education</span>
-              <span class="tag">Higher Education</span>
-              <span class="tag">Tenant Improvement</span>
-              <span class="tag">Design-Build</span>
-              <span class="tag">Municipal</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- ════════════════════════════════════════
-     PRICING
-════════════════════════════════════════ -->
-<section class="sec" id="pricing" aria-labelledby="pricing-heading">
-  <div class="container">
-    <div class="sec-head--center">
-      <div class="chip reveal">Pricing</div>
-      <h2 class="sec-title reveal reveal--d1" id="pricing-heading">Simple, predictable pricing</h2>
-    </div>
-    
-    <div class="pricing-card reveal reveal--d2">
-      <div class="pricing-header">
-        <h3 class="pricing-name">Pro Plan</h3>
-        <div class="pricing-price">
-          <span class="currency">$</span>549<span class="period">/mo</span>
-        </div>
-        <p class="pricing-desc">Everything your team needs to derisk commercial electrical estimates.</p>
-      </div>
-      
-      <ul class="pricing-features" role="list">
-        <li>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Up to 4 full bid package reviews per month
-        </li>
-        <li>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Scope, RFI & Addenda reconciliation
-        </li>
-        <li>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span style="color: var(--ink-muted);">+$250 per additional bid</span>
-        </li>
-      </ul>
-      
-      <div style="text-align: center;">
-        <button class="btn btn--primary btn--block" aria-haspopup="dialog" onclick="document.querySelector('.modal-overlay').classList.add('is-open')">Request a Sample Review</button>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ════════════════════════════════════════
      TRUST & LIMITS
@@ -799,8 +617,7 @@
         <nav class="footer__links" aria-label="Footer links">
           <a href="about.html">About HVAX</a>
           <a href="technology.html">Built on Claude</a>
-          <a href="#pricing">Pricing</a>
-          <a href="privacy.html">Privacy Policy</a>
+                    <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
           <a href="mailto:founder@hvax.dev">founder@hvax.dev</a>
           <a href="https://www.linkedin.com/company/hvax1dev" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -810,6 +627,7 @@
           HVAX &mdash; founded 2026 &middot; Delhi, India
         </div>
         <div class="footer__copy" style="margin-top: 0.5rem; color: var(--ink-subtle);">Proudly built on the Anthropic Claude API. 🧡</div>
+        <div class="footer__copy" style="margin-top: 0.5rem; color: var(--ink-subtle);"><strong>Note:</strong> BidEyes is a product of [FILL IN]. Not HVAX Technologies Limited (NSE: HVAX / hvax.in) and not an HVAC product.</div>
       </div>
     </div>
   </div>

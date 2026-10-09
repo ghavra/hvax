@@ -35,36 +35,20 @@
     </div>
   </nav>
 
-  <section class="sec" style="padding-top: 140px;">
+  <section class="sec">
     <div class="container" style="max-width: 800px;">
-      <div class="chip">Technology</div>
-      <h1 class="sec-title">Powered by Anthropic Claude</h1>
-      <p class="sec-sub">BidEyes is built from the ground up on Claude to handle massive bid packages that break traditional chunk-based AI models.</p>
-
+      <h1 class="sec-title">Technology</h1>
       <div style="color: var(--ink); line-height: 1.7; margin-top: var(--s-8);">
-        <h2 style="font-size: var(--text-xl); font-weight: 700; margin-top: var(--s-8); margin-bottom: var(--s-4);">Why Claude?</h2>
-        <p>Commercial construction bid packages aren't just long; they are deeply interconnected. A note on a Division 26 drawing on page 850 might contradict a mechanical specification on page 120. Standard retrieval-augmented generation (RAG) models chop these documents into chunks, completely destroying the context required to spot these contradictions.</p>
-        <p>We chose <strong>Claude</strong> (by Anthropic) specifically for its industry-leading <strong>long-context window</strong>. By feeding the entire 1,700+ page bid package into Claude simultaneously, BidEyes maintains perfect cross-document awareness. Claude can trace a scope requirement from the Invitation to Bid, through the General Conditions, directly into the Electrical drawings.</p>
-
-        <h2 style="font-size: var(--text-xl); font-weight: 700; margin-top: var(--s-8); margin-bottom: var(--s-4);">The 5-Step Review Pipeline</h2>
-        <ol style="margin-left: var(--s-4); margin-bottom: var(--s-6);">
-          <li style="margin-bottom: var(--s-2);"><strong>Ingestion:</strong> You upload the complete package (ITBs, specs, drawings, addenda).</li>
-          <li style="margin-bottom: var(--s-2);"><strong>OCR & Parsing:</strong> We normalize the unstructured text and vector drawings.</li>
-          <li style="margin-bottom: var(--s-2);"><strong>Full-Context Loading:</strong> The entire set is loaded into Claude's context window.</li>
-          <li style="margin-bottom: var(--s-2);"><strong>Domain Reasoning:</strong> Using specialized preconstruction prompts, Claude analyzes the package for electrical-specific risks, scope gaps, and contradictions.</li>
-          <li style="margin-bottom: var(--s-2);"><strong>Source Faithfulness:</strong> Claude cites the exact document and page number for every finding.</li>
-        </ol>
-
-        <h2 style="font-size: var(--text-xl); font-weight: 700; margin-top: var(--s-8); margin-bottom: var(--s-4);">Human-in-the-Loop</h2>
-        <p>BidEyes is an assistive intelligence tool. Claude flags the risks, prioritizes the contradictions, and drafts the RFIs, but the <strong>estimator always makes the final call</strong>. Our UI allows preconstruction teams to review Claude's findings side-by-side with the source documents before finalizing their numbers.</p>
-
-        <h2 style="font-size: var(--text-xl); font-weight: 700; margin-top: var(--s-8); margin-bottom: var(--s-4);">Data Handling & Security</h2>
-        <p>Your proprietary bid documents remain yours. Through our API partnership with Anthropic, <strong>Claude does not train on your data</strong>. Documents are processed securely, analyzed, and then purged from our active processing servers. We maintain strict isolation between customer workspaces.</p>
-
-        <h2 style="font-size: var(--text-xl); font-weight: 700; margin-top: var(--s-8); margin-bottom: var(--s-4);">What's Next</h2>
-        <p>As Anthropic continues to push the boundaries of Claude's reasoning capabilities, BidEyes is evolving to support even larger multi-trade packages, automated quantity takeoff validation, and deeper historical addenda tracking.</p>
+        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">How Claude is used</h3>
+        <p>Customers send their bid packages via email. These documents will be processed by our system to identify findings, scope gaps, and contradictions, returning citations to specific documents and page numbers. A human estimator will then review every finding before a final report is sent back to the customer.</p>
+        <p>Customers receive reviewed reports only; they never receive API access or API keys. Currently, our Claude integration is in build, and the specific Claude model in production is [NONE YET].</p>
       </div>
     </div>
   </section>
+  <footer style="padding: 2rem 0; text-align: center; color: var(--ink-subtle);">
+    <div class="container">
+      <small><strong>Note:</strong> BidEyes is a product of [FILL IN]. Not HVAX Technologies Limited (NSE: HVAX / hvax.in) and not an HVAC product.</small>
+    </div>
+  </footer>
 </body>
 </html>
