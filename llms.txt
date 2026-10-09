@@ -1,9 +1,9 @@
 # BidEyes
-> BidEyes is an AI-assisted pre-bid document review service for commercial electrical contractors.
+> BidEyes is an AI-assisted pre-bid document review tool for commercial electrical contractors. Early stage.
 
 ## Docs
 - [Technology](https://hvax.dev/technology.html)
 - [About](https://hvax.dev/about.html)
 
 ## Technical Approach
-Customers email bid packages. Our system processes the documents to identify findings with source citations, followed by human estimator review. Customers receive reviewed reports. We are building on the Anthropic Claude API for document analysis.
+BidEyes is building an automated review pipeline on the Claude API. Sample reports are produced from public bid packages and checked by the founder. Customer reviews are not yet available.
