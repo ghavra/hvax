@@ -4,9 +4,8 @@
 
 ## 1. Company & Entity Details
 *   **Exact Legal Name:** BidEyes
-*   **Registered Entity Status:** Not yet a registered entity; sole-founder phase
 *   **Founding Date:** [PENDING: Month + Year]
-*   **Registered Location:** Jaipur, Rajasthan, India
+*   **Location:** Delhi, India
 *   **Founder Name:** Raghav Sharma
 *   **Founder LinkedIn URL:** linkedin.com/in/raghav-s-a197ab220
 
