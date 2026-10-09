@@ -47,7 +47,7 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
   // Click outside
   document.addEventListener('click', e => {
-    if (!nav.contains(e.target)) setOpen(false);
+    if (nav && !nav.contains(e.target)) setOpen(false);
   });
 
   document.addEventListener('keydown', e => {
