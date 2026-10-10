@@ -4,12 +4,12 @@
 // 2. Go to "API Keys".
 // 3. Find your Publishable Key.
 // 4. Replace the placeholder below.
-const CLERK_PUBLISHABLE_KEY = 'pk_test_YOUR_CLERK_PUBLISHABLE_KEY_HERE';
+const CLERK_PUBLISHABLE_KEY = 'pk_test_cHJlcGFyZWQtbXVza294LTEzNTMuY2xlcmsuYWNjb3VudHMuZGV2JA';
 const CLERK_FRONTEND_API_URL = 'https://prepared-muskox-1353.clerk.accounts.dev';
 
 // The script paths as derived from your provided Frontend API URL
-const CLERK_UI_SCRIPT_URL = `${CLERK_FRONTEND_API_URL}/npm/@clerk/clerk-js@5/dist/clerk-ui.browser.js`;
-const CLERK_CORE_SCRIPT_URL = `${CLERK_FRONTEND_API_URL}/npm/@clerk/clerk-js@5/dist/clerk.browser.js`;
+const CLERK_UI_SCRIPT_URL = `${CLERK_FRONTEND_API_URL}/npm/@clerk/ui@1/dist/ui.browser.js`;
+const CLERK_CORE_SCRIPT_URL = `${CLERK_FRONTEND_API_URL}/npm/@clerk/clerk-js@6/dist/clerk.browser.js`;
 
 async function loadScript(src, attributes = {}) {
   return new Promise((resolve, reject) => {
@@ -34,11 +34,16 @@ async function initClerk() {
 
   try {
     // Load the Clerk UI bundle FIRST as per the new official Javascript Quickstart
-    await loadScript(CLERK_UI_SCRIPT_URL);
+    await loadScript(CLERK_UI_SCRIPT_URL, {
+      'defer': 'true',
+      'type': 'text/javascript'
+    });
     
     // Load the Clerk core JS SDK NEXT
     await loadScript(CLERK_CORE_SCRIPT_URL, {
-      'data-clerk-publishable-key': CLERK_PUBLISHABLE_KEY
+      'data-clerk-publishable-key': CLERK_PUBLISHABLE_KEY,
+      'defer': 'true',
+      'type': 'text/javascript'
     });
 
     // Initialize Clerk using the documented UI configuration
