@@ -464,6 +464,118 @@
 </section>
 
 <!-- ════════════════════════════════════════
+     FAQ
+════════════════════════════════════════ -->
+<section class="sec" aria-labelledby="faq-heading" style="padding-top: var(--s-10); padding-bottom: var(--s-10);">
+  <div class="container" style="max-width: 800px;">
+    
+    <div style="margin-bottom: var(--s-8); text-align: center;">
+      <h2 id="faq-heading" class="sec-title">Frequently asked questions</h2>
+    </div>
+
+    <style>
+      .faq-item {
+        background: var(--surface);
+        border: 1px solid var(--border-light);
+        border-radius: var(--r-md);
+        margin-bottom: var(--s-3);
+        box-shadow: var(--sh-sm);
+      }
+      .faq-item summary {
+        padding: var(--s-4) var(--s-5);
+        font-weight: 600;
+        font-size: var(--text-base);
+        cursor: pointer;
+        color: var(--ink);
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-item summary::after {
+        content: "+";
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--ink-subtle);
+        line-height: 1;
+      }
+      .faq-item[open] summary::after {
+        content: "−";
+      }
+      .faq-item[open] summary {
+        border-bottom: 1px solid var(--border-light);
+        background: var(--surface-2);
+      }
+      .faq-content {
+        padding: var(--s-5);
+        color: var(--ink-muted);
+        line-height: 1.6;
+        font-size: var(--text-base);
+      }
+      .faq-content a {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+    </style>
+
+    <div class="reveal reveal--d1">
+      <details class="faq-item">
+        <summary>How does a subcontractor buy, pilot or test BidEyes?</summary>
+        <div class="faq-content">
+          We are currently operating in a Private Beta. You can request a pilot, and we will run your active or historical bids through our pipeline to surface risks you may have missed. Pilot pricing is custom-tailored to your estimating volume.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What file types can I upload?</summary>
+        <div class="faq-content">
+          Standard PDFs. We process Instructions to Bidders (ITBs), Project Manuals (specifications), drawing sets, and addenda exactly as you receive them.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is my bid data used to train AI?</summary>
+        <div class="faq-content">
+          <strong>No.</strong> We use commercial API agreements that strictly prohibit training foundational models on your documents. Your data is your intellectual property. Read our full data commitments on our <a href="security.html">Security page</a>.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long do you keep my documents?</summary>
+        <div class="faq-content">
+          By default, we permanently purge all project files 30 days after your final report is delivered, or immediately upon your request.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Does it replace my estimator?</summary>
+        <div class="faq-content">
+          <strong>Absolutely not.</strong> BidEyes gives your estimating team a documented second set of eyes before the bid goes out. It does not replace estimator judgment, takeoff, or the Architect/Engineer's answer to an RFI. It simply surfaces the commercial and scope conflicts your estimator should know about before the number is set.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How accurate is it / what are the limits?</summary>
+        <div class="faq-content">
+          It does not promise to find everything. Where the documents are silent, the finding says so and does not guess. Because it can miss items, every single finding we deliver includes the exact source quote, its impact, and a specific action so your team can quickly verify the risk themselves.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long does a review take?</summary>
+        <div class="faq-content">
+          Pilot reviews are delivered 38 to 48 hours before your bid is due, giving your team plenty of time to review the findings, adjust your number, or submit RFIs.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
      FOUNDER
 ════════════════════════════════════════ -->
 <section class="sec" aria-labelledby="founder-heading">
