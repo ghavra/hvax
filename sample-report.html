@@ -33,12 +33,131 @@
     </div>
   </nav>
 
-  <section class="sec" style="padding-top: 140px;">
-    <div class="container" style="max-width: 800px;">
-      <h1 class="sec-title">Sample Report</h1>
+    <section class="sec" style="padding-top: 140px; padding-bottom: var(--s-10); background: var(--surface-1);">
+    <div class="container" style="max-width: 1000px;">
       
-      <div style="color: var(--ink); line-height: 1.7; margin-top: var(--s-8);"><p style="font-size: var(--text-lg); margin-bottom: var(--s-6);">This page is currently being updated for our private beta.</p>
-<p>If you have any immediate questions, please email <a href="mailto:founder@hvax.dev" style="color: var(--accent);">founder@hvax.dev</a>.</p></div>
+      <div style="margin-bottom: var(--s-8);">
+        <div class="chip" style="margin-bottom: var(--s-4);">Pilot Output</div>
+        <h1 class="sec-title" style="margin-bottom: var(--s-2); font-size: clamp(32px, 5vw, 48px);">Sample Report Dashboard</h1>
+        <p class="sec-sub" style="font-size: var(--text-lg); max-width: 800px;">This interactive sample mirrors the exact depth and format of the pre-bid risk reviews we deliver. Based on the Clark Electric pilot for a Middle School project.</p>
+      </div>
+
+      <!-- Top Metrics -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--s-4); margin-bottom: var(--s-8);">
+        <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-md); padding: var(--s-6); box-shadow: var(--sh-sm);">
+          <strong style="display: block; font-size: 3rem; font-weight: 800; color: var(--ink); line-height: 1;">10</strong>
+          <span style="color: var(--ink-muted); font-weight: 500; font-size: var(--text-sm);">risks found</span>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-md); padding: var(--s-6); box-shadow: var(--sh-sm);">
+          <strong style="display: block; font-size: 3rem; font-weight: 800; color: var(--ink); line-height: 1;">4</strong>
+          <span style="color: var(--ink-muted); font-weight: 500; font-size: var(--text-sm);">Priority 1 issues to resolve before pricing</span>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-md); padding: var(--s-6); box-shadow: var(--sh-sm);">
+          <strong style="display: block; font-size: 3rem; font-weight: 800; color: var(--ink); line-height: 1;">8</strong>
+          <span style="color: var(--ink-muted); font-weight: 500; font-size: var(--text-sm);">RFI-ready questions written to send</span>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-md); padding: var(--s-6); box-shadow: var(--sh-sm);">
+          <strong style="display: block; font-size: 3rem; font-weight: 800; color: var(--ink); line-height: 1;">~888</strong>
+          <span style="color: var(--ink-muted); font-weight: 500; font-size: var(--text-sm);">pages reviewed (MEP manual + 4 Addenda)</span>
+        </div>
+      </div>
+
+      <!-- Priority 1 Board -->
+      <h3 style="font-size: var(--text-xl); font-weight: 700; color: var(--ink); margin-bottom: var(--s-4);">What could go wrong: The 4 Priority 1 Items</h3>
+      <p style="color: var(--ink-muted); margin-bottom: var(--s-4);">Each of these moves the price or the compliance position significantly. These must be resolved before the final number is set.</p>
+      
+      <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-md); box-shadow: var(--sh-sm); overflow: hidden; margin-bottom: var(--s-10);">
+        <div style="display: grid; grid-template-columns: 60px 140px 180px 1fr 80px; gap: var(--s-3); padding: var(--s-4); border-bottom: 1px solid var(--border-light); align-items: center; font-size: var(--text-sm);">
+          <div><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 4px 8px; border-radius: 4px;">P1</span></div>
+          <div><span style="background: #1e3a8a; color: white; font-weight: 600; font-size: 11px; padding: 4px 8px; letter-spacing: 0.05em; border-radius: 2px;">PRICE</span></div>
+          <div><strong style="font-size: var(--text-base); color: var(--ink);">$150K</strong></div>
+          <div style="color: var(--ink-muted);">Temporary-power allowance appears twice. One allowance or two?</div>
+          <div style="font-weight: 700; color: var(--ink);">RFI</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 60px 140px 180px 1fr 80px; gap: var(--s-3); padding: var(--s-4); border-bottom: 1px solid var(--border-light); align-items: center; font-size: var(--text-sm);">
+          <div><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 4px 8px; border-radius: 4px;">P1</span></div>
+          <div><span style="background: #7f1d1d; color: white; font-weight: 600; font-size: 11px; padding: 4px 8px; letter-spacing: 0.05em; border-radius: 2px;">COMPLIANCE</span></div>
+          <div><strong style="font-size: var(--text-base); color: var(--ink);">48 vs 72 hrs</strong></div>
+          <div style="color: var(--ink-muted);">Shutdown notice conflicts between Division 26 and Division 01.</div>
+          <div style="font-weight: 700; color: var(--ink);">RFI</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 60px 140px 180px 1fr 80px; gap: var(--s-3); padding: var(--s-4); border-bottom: 1px solid var(--border-light); align-items: center; font-size: var(--text-sm);">
+          <div><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 4px 8px; border-radius: 4px;">P1</span></div>
+          <div><span style="background: #4c1d95; color: white; font-weight: 600; font-size: 11px; padding: 4px 8px; letter-spacing: 0.05em; border-radius: 2px;">SCOPE</span></div>
+          <div><strong style="font-size: var(--text-base); color: var(--ink);">Theatre package</strong></div>
+          <div style="color: var(--ink-muted);">Removed by Addendum 1, but the fixture package is still in the scope list.</div>
+          <div style="font-weight: 700; color: var(--ink);">RFI</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 60px 140px 180px 1fr 80px; gap: var(--s-3); padding: var(--s-4); align-items: center; font-size: var(--text-sm);">
+          <div><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 4px 8px; border-radius: 4px;">P1</span></div>
+          <div><span style="background: #b45309; color: white; font-weight: 600; font-size: 11px; padding: 4px 8px; letter-spacing: 0.05em; border-radius: 2px;">RESPONSIBILITY</span></div>
+          <div><strong style="font-size: var(--text-base); color: var(--ink); line-height: 1.2;">Pre-purchase boundary</strong></div>
+          <div style="color: var(--ink-muted);">The RFI answer and the scope text disagree on who supplies panelboards.</div>
+          <div style="font-weight: 700; color: var(--ink);">Verify</div>
+        </div>
+      </div>
+
+      <!-- Addenda Delta Callout -->
+      <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-left: 4px solid #4f46e5; border-radius: 8px; padding: var(--s-6); margin-bottom: var(--s-10);">
+        <strong style="display: block; color: #3730a3; font-size: var(--text-sm); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: var(--s-2);">Addenda Delta: The pattern worth noticing</strong>
+        <p style="color: #312e81; font-weight: 500; font-size: var(--text-base); margin-bottom: var(--s-2);">Two of the four Priority 1 findings exist because an addendum changed the answer but the base document was not updated.</p>
+        <p style="color: #4338ca; font-size: var(--text-sm); line-height: 1.6; margin-bottom: 0;">Addendum 1 removed theatre lighting, yet the scope list still carries the fixture package. Addendum 2 narrowed the pre-purchase boundary in an RFI answer, yet the scope text still carries the catch-all. <strong>We don't just read the bid package. We reconcile changes across the issued documents.</strong></p>
+      </div>
+
+      <!-- Deep Dive Finding -->
+      <h3 style="font-size: var(--text-xl); font-weight: 700; color: var(--ink); margin-bottom: var(--s-4);">Sample finding, as delivered</h3>
+      <p style="color: var(--ink-muted); margin-bottom: var(--s-4);">Every finding follows the same shape: source, issue, impact, action, with the exact quote, document and page.</p>
+
+      <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-lg); box-shadow: var(--sh-md); overflow: hidden; margin-bottom: var(--s-10);">
+        <div style="padding: var(--s-5); border-bottom: 1px solid var(--border-light); background: var(--surface-2); display: flex; gap: var(--s-4); align-items: center; flex-wrap: wrap;">
+          <span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 4px 8px; border-radius: 4px; font-size: var(--text-sm);">P1</span>
+          <span style="color: var(--ink-subtle); font-family: monospace; font-size: var(--text-sm);">#01</span>
+          <strong style="font-size: var(--text-lg); color: var(--ink);">Temporary power: $150,000 appears twice</strong>
+          <span style="margin-left: auto; color: #b91c1c; font-weight: 700; font-size: 11px; letter-spacing: 0.05em;">BEFORE PRICING</span>
+        </div>
+        
+        <div style="padding: var(--s-6);">
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: var(--s-4); margin-bottom: var(--s-4); align-items: start;">
+            <strong style="color: var(--ink-subtle); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em;">What Changes</strong>
+            <div style="display: flex; gap: 8px;">
+              <span style="background: #1e3a8a; color: white; font-weight: 600; font-size: 11px; padding: 4px 12px; border-radius: 2px;">PRICE</span>
+              <span style="background: #3730a3; color: white; font-weight: 600; font-size: 11px; padding: 4px 12px; border-radius: 2px;">RFI</span>
+            </div>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: var(--s-4); margin-bottom: var(--s-4); align-items: start;">
+            <strong style="color: var(--ink-subtle); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em;">Source</strong>
+            <span style="color: var(--ink); font-size: var(--text-sm);">Project Manual p. 206 (§002226.01 item 17.a) and p. 218 (3.02.D.3.a.2)</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: var(--s-4); margin-bottom: var(--s-4); align-items: start;">
+            <strong style="color: var(--ink-subtle); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em;">Issue</strong>
+            <span style="color: var(--ink); font-size: var(--text-sm); line-height: 1.6;">The package states $150,000 for temporary power in two locations with different wording. The second sentence ends without saying what the money is for.</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: var(--s-4); margin-bottom: var(--s-4); align-items: start;">
+            <strong style="color: var(--ink-subtle); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em;">Impact</strong>
+            <span style="color: var(--ink); font-size: var(--text-sm); line-height: 1.6;">If both are the same allowance and you carry it twice, you are $150,000 high. If they are two allowances and you carry it once, you are $150,000 low.</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: var(--s-4); margin-bottom: var(--s-6); align-items: start;">
+            <strong style="color: var(--ink-subtle); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em;">Action</strong>
+            <span style="color: var(--ink); font-size: var(--text-sm); line-height: 1.6;"><strong>RFI before pricing.</strong> Confirm whether the two $150,000 figures are one allowance or two, and what the second covers.</span>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: var(--s-4);">
+            <div style="margin-bottom: var(--s-4);">
+              <p style="font-family: monospace; font-size: 13px; color: var(--ink); margin-bottom: 4px;">"Include an amount of One Hundred Fifty Thousand ($150,000) for power usage costs. Any unused portion of these funds will be credited to the Owner"</p>
+              <span style="font-size: 11px; color: var(--ink-subtle); text-transform: uppercase;">§002226.01 item 17.a &middot; Project Manual p. 206</span>
+            </div>
+            <div>
+              <p style="font-family: monospace; font-size: 13px; color: var(--ink); margin-bottom: 4px;">"Include an allowance of $150,000 in this Contractor's bid for temporary power"</p>
+              <span style="font-size: 11px; color: var(--ink-subtle); text-transform: uppercase;">§002226.01 3.02.D.3.a.2) &middot; Project Manual p. 218</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
     <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
