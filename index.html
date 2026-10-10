@@ -26,42 +26,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "SoftwareApplication",
+      "@type": "Organization",
+      "@id": "https://hvax.dev/#organization",
+      "name": "HVAX",
+      "legalName": "Raghav Sharma trading as HVAX",
+      "foundingDate": "2026-03",
+      "url": "https://hvax.dev",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "India Habitat Centre, Lodhi Road",
+        "addressLocality": "New Delhi",
+        "addressRegion": "Delhi",
+        "postalCode": "110003",
+        "addressCountry": "IN"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Raghav Sharma"
+      }
+    },
+    {
+      "@type": ["SoftwareApplication", "BusinessApplication"],
       "@id": "https://hvax.dev/#software",
       "name": "BidEyes",
       "url": "https://hvax.dev",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "description": "Pre-bid risk review for commercial electrical subcontractors. Flags potential scope gaps and conflicts before you bid, each with a citation.",
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "commercial electrical estimators"
+      "description": "Pre-bid risk review pipeline for commercial electrical subcontractors. Automatically flags scope gaps and cross-references MEP manuals before you bid.",
+      "publisher": {
+        "@id": "https://hvax.dev/#organization"
       },
-      "provider": {
-        "@type": "Organization",
-        "name": "HVAX",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "hi Road",
-          "addressLocality": "New Delhi",
-          "addressRegion": "Delhi",
-          "postalCode": "110003",
-          "addressCountry": "IN"
-        },
-        "founder": {
-          "@type": "Person",
-          "name": "Raghav Sharma"
-        }
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Private Beta Pilot (Free)"
       }
     },
     {
       "@type": "WebSite",
       "@id": "https://hvax.dev/#website",
       "url": "https://hvax.dev",
-      "name": "BidEyes",
+      "name": "BidEyes | AI Risk Review for Electrical Subcontractors",
       "publisher": {
-        "@type": "Organization",
-        "name": "HVAX"
+        "@id": "https://hvax.dev/#organization"
       }
     }
   ]
@@ -666,6 +674,7 @@
           <a href="privacy.html" style="color: var(--accent);">Privacy</a>
           <a href="terms.html" style="color: var(--accent);">Terms</a>
           <a href="security.html" style="color: var(--accent);">Security</a>
+          <a href="releases.html" style="color: var(--accent);">Releases</a>
         </div>
       </div>
     </div>

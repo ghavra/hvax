@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Product updates and release history for BidEyes.">
+  <title>Releases | BidEyes</title>
+  <meta property="og:title" content="Releases | BidEyes" />
+  <meta property="og:description" content="Product updates and release history for BidEyes." />
+  <meta property="og:image" content="https://hvax.dev/og-image.png" />
+  <meta property="og:site_name" content="BidEyes" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none;">
+          <img src="assets/logo.png" alt="BidEyes Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" />
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">BidEyes</span>
+          </div>
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="sample-report.html">Sample report</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div class="nav__actions" id="auth-actions" style="display: none; gap: 16px; align-items: center;">
+            <a href="sign-in.html" class="btn btn--ghost" style="padding: 10px 16px;">Sign in</a>
+            <a href="sign-up.html" class="btn btn--primary" style="padding: 10px 16px;">Sign up</a>
+          </div>
+          <div id="user-button-mount"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="sec" style="padding-top: 140px; min-height: 80vh;">
+    <div class="container" style="max-width: 800px;">
+      <h1 class="sec-title" style="margin-bottom: var(--s-2);">Release History</h1>
+      <p class="sec-sub" style="font-size: 1.1rem; max-width: 100%; margin-bottom: var(--s-10);">A log of updates, new features, and improvements to the BidEyes review pipeline.</p>
+      
+      <div style="display: flex; flex-direction: column; gap: var(--s-8);">
+        
+        <div style="border-left: 2px solid var(--border-light); padding-left: var(--s-6); position: relative;">
+          <div style="position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--accent);"></div>
+          <span style="color: var(--ink-muted); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">October 10, 2026</span>
+          <h3 style="font-size: var(--text-xl); color: var(--ink); margin-top: var(--s-2); margin-bottom: var(--s-3);">Private Beta Authentication & Concierge Onboarding</h3>
+          <p style="color: var(--ink-muted); line-height: 1.6; margin-bottom: var(--s-3);">Implemented secure Clerk authentication for all pilot users. Because we handle highly confidential estimating data, we have disabled automated self-serve uploads. Upon account creation, users now enter a pending status while our engineering team manually provisions dedicated, secure workspaces and executes NDAs.</p>
+        </div>
+
+        <div style="border-left: 2px solid var(--border-light); padding-left: var(--s-6); position: relative;">
+          <div style="position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--surface-2); border: 2px solid var(--border-light);"></div>
+          <span style="color: var(--ink-muted); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">October 5, 2026</span>
+          <h3 style="font-size: var(--text-xl); color: var(--ink); margin-top: var(--s-2); margin-bottom: var(--s-3);">Added Exact-Page Citation View</h3>
+          <p style="color: var(--ink-muted); line-height: 1.6; margin-bottom: var(--s-3);">Estimators need to verify AI findings instantly. We updated the risk dashboard to explicitly cite the exact source document, page number, and verbatim clause for every identified conflict, eliminating the need to search through 900-page MEP manuals.</p>
+        </div>
+
+        <div style="border-left: 2px solid var(--border-light); padding-left: var(--s-6); position: relative;">
+          <div style="position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--surface-2); border: 2px solid var(--border-light);"></div>
+          <span style="color: var(--ink-muted); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">September 28, 2026</span>
+          <h3 style="font-size: var(--text-xl); color: var(--ink); margin-top: var(--s-2); margin-bottom: var(--s-3);">Division 1 Cross-Referencing Logic</h3>
+          <p style="color: var(--ink-muted); line-height: 1.6; margin-bottom: var(--s-3);">Enhanced the pipeline's ability to detect conflicts between Division 01 (General Requirements) and Division 26 (Electrical). The system now reliably flags discrepancies in Temporary Power allowances and shutdown notice periods.</p>
+        </div>
+
+        <div style="border-left: 2px solid var(--border-light); padding-left: var(--s-6); position: relative;">
+          <div style="position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--surface-2); border: 2px solid var(--border-light);"></div>
+          <span style="color: var(--ink-muted); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">September 15, 2026</span>
+          <h3 style="font-size: var(--text-xl); color: var(--ink); margin-top: var(--s-2); margin-bottom: var(--s-3);">Initial Pipeline & Clark Electric Pilot</h3>
+          <p style="color: var(--ink-muted); line-height: 1.6; margin-bottom: var(--s-3);">Successfully ran our first end-to-end extraction pipeline on an 888-page middle school project for Clark Electric. Surfaced 4 Priority-1 risks and drafted 8 RFI-ready questions.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: var(--s-4); color: var(--ink-muted); font-size: var(--text-sm);">
+        <p>BidEyes is built and operated by HVAX, a sole proprietorship owned by Raghav Sharma. Founded March 2026. India Habitat Centre, Lodhi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
+        <div style="display: flex; gap: var(--s-4); flex-wrap: wrap;">
+          <a href="mailto:support@hvax.dev" style="color: var(--accent);">support@hvax.dev</a>
+          <a href="privacy.html" style="color: var(--accent);">Privacy</a>
+          <a href="terms.html" style="color: var(--accent);">Terms</a>
+          <a href="security.html" style="color: var(--accent);">Security</a>
+          <a href="releases.html" style="color: var(--accent);">Releases</a>
+          
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="auth.js"></script>
+</body>
+</html>
