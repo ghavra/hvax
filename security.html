@@ -33,12 +33,46 @@
     </div>
   </nav>
 
-  <section class="sec" style="padding-top: 140px;">
-    <div class="container" style="max-width: 800px;">
-      <h1 class="sec-title">Security and Data Handling</h1>
+    <section class="sec" style="padding-top: 140px; padding-bottom: var(--s-10);">
+    <div class="container" style="max-width: 900px;">
       
-      <div style="color: var(--ink); line-height: 1.7; margin-top: var(--s-8);"><p style="font-size: var(--text-lg); margin-bottom: var(--s-6);">This page is currently being updated for our private beta.</p>
-<p>If you have any immediate questions, please email <a href="mailto:founder@hvax.dev" style="color: var(--accent);">founder@hvax.dev</a>.</p></div>
+      <div style="margin-bottom: var(--s-10);">
+        <h1 class="sec-title" style="margin-bottom: var(--s-4);">How we protect your bid data</h1>
+        <p class="sec-sub" style="font-size: var(--text-lg); max-width: 100%;">Commercial electrical bids contain sensitive IP and pricing strategies. We operate on three strict principles to protect your documents.</p>
+      </div>
+      
+      <!-- The Big Three -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--s-6); margin-bottom: var(--s-10);">
+        <div style="background: var(--surface-2); padding: var(--s-6); border: 1px solid var(--border-light); border-radius: var(--r-lg);">
+          <strong style="display: block; font-size: var(--text-lg); color: var(--ink); margin-bottom: var(--s-2);">Zero model training</strong>
+          <p style="color: var(--ink-muted); font-size: var(--text-sm);">Your drawings, specs, and ITBs are never used to train our AI models or anyone else's models.</p>
+        </div>
+        <div style="background: var(--surface-2); padding: var(--s-6); border: 1px solid var(--border-light); border-radius: var(--r-lg);">
+          <strong style="display: block; font-size: var(--text-lg); color: var(--ink); margin-bottom: var(--s-2);">Zero AI retention</strong>
+          <p style="color: var(--ink-muted); font-size: var(--text-sm);">We use commercial APIs. Our AI provider does not retain your data after a request is processed.</p>
+        </div>
+        <div style="background: var(--surface-2); padding: var(--s-6); border: 1px solid var(--border-light); border-radius: var(--r-lg);">
+          <strong style="display: block; font-size: var(--text-lg); color: var(--ink); margin-bottom: var(--s-2);">You own your data</strong>
+          <p style="color: var(--ink-muted); font-size: var(--text-sm);">We claim no ownership over your documents. You can request complete deletion at any time.</p>
+        </div>
+      </div>
+
+      <!-- Detailed Sections -->
+      <div style="color: var(--ink); line-height: 1.7;">
+        
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-top: var(--s-8); margin-bottom: var(--s-3); padding-bottom: var(--s-2); border-bottom: 2px solid var(--border-light);">1. AI and Subprocessors</h3>
+        <p style="color: var(--ink-muted); margin-bottom: var(--s-4);">BidEyes uses the commercial Anthropic API (Claude), not the public web interface. Under our commercial agreement, Anthropic is strictly prohibited from using your data to train their models. Your data is processed securely to generate the findings and is immediately discarded by Anthropic's systems once the request is complete.</p>
+
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-top: var(--s-8); margin-bottom: var(--s-3); padding-bottom: var(--s-2); border-bottom: 2px solid var(--border-light);">2. Infrastructure and Encryption</h3>
+        <p style="color: var(--ink-muted); margin-bottom: var(--s-4);">All bid documents sent to BidEyes are encrypted in transit using TLS 1.2+ and encrypted at rest using industry-standard AES-256. Files are stored on secure cloud infrastructure with strict physical and network security controls.</p>
+
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-top: var(--s-8); margin-bottom: var(--s-3); padding-bottom: var(--s-2); border-bottom: 2px solid var(--border-light);">3. Data Retention and Deletion</h3>
+        <p style="color: var(--ink-muted); margin-bottom: var(--s-4);">We only keep your bid package for as long as it takes to complete your pre-bid risk review and support your estimators through the bidding process. By default, all project files are permanently purged from our systems 30 days after the final report is delivered, or immediately upon your request.</p>
+
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-top: var(--s-8); margin-bottom: var(--s-3); padding-bottom: var(--s-2); border-bottom: 2px solid var(--border-light);">4. Internal Access</h3>
+        <p style="color: var(--ink-muted); margin-bottom: var(--s-4);">We operate on a principle of strict least-privilege access. Your bid documents are only accessed by authorized personnel (the BidEyes founder) strictly to verify findings and finalize your report before delivery. We never share, sell, or expose your documents to third parties or other subcontractors.</p>
+
+      </div>
     </div>
   </section>
     <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
