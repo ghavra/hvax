@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service | BidEyes by HVAX</title>
+  <meta name="description" content="Terms of Service for BidEyes.">
+  <title>Terms of Service | BidEyes</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
-  <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="container">
       <div class="nav__inner">
         <a href="index.html" class="nav__logo" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none;">
-          <img src="assets/logo.png" alt="HVAX Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" />
+          <img src="assets/logo.png" alt="BidEyes Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" />
           <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">HVAX</span>
-            <span style="color: var(--border-light); font-size: 1.1rem; font-weight: 300;">|</span>
-            <span style="font-size: 1.25rem; font-weight: 600; color: var(--accent);">BidEyes</span>
+            <span style="font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">BidEyes</span>
           </div>
         </a>
         <ul class="nav__links" role="list">
-          <li><a href="index.html#product">Product</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="sample-report.html">Sample report</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
         </ul>
         <div class="nav__actions">
-          <a href="index.html" class="btn btn--ghost">Back to Home</a>
+          <a href="request-pilot.html" class="btn btn--primary">Request pilot</a>
         </div>
       </div>
     </div>
@@ -59,5 +60,18 @@
       </div>
     </div>
   </section>
-  </body>
+    <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: var(--s-4); color: var(--ink-muted); font-size: var(--text-sm);">
+        <p>BidEyes is built and operated by HVAX, a sole proprietorship owned by Raghav Sharma. Founded March 2026. hi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
+        <div style="display: flex; gap: var(--s-4); flex-wrap: wrap;">
+          <a href="mailto:support@hvax.dev" style="color: var(--accent);">support@hvax.dev</a>
+          <a href="privacy.html" style="color: var(--accent);">Privacy</a>
+          <a href="terms.html" style="color: var(--accent);">Terms</a>
+          <a href="security.html" style="color: var(--accent);">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>

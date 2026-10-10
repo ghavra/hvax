@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO & Meta Tags -->
-  <title>BidEyes - AI-Assisted Pre-Bid Document Review</title>
-  <meta name="description" content="BidEyes is an AI-assisted pre-bid document review tool for commercial electrical contractors. Early stage.">
+  <title>BidEyes: Pre-bid risk review for electrical subcontractors</title>
+  <meta name="description" content="BidEyes reviews your drawings, specs and addenda before you bid and flags potential scope gaps and conflicts, each with a page citation.">
   <link rel="canonical" href="https://hvax.dev" />
   <meta name="robots" content="index, follow" />
   
   <!-- Open Graph -->
-  <meta property="og:title" content="BidEyes - AI Pre-Bid Risk Review" />
-  <meta property="og:description" content="BidEyes helps surface potential scope gaps and contradictions in commercial electrical bid packages." />
+  <meta property="og:title" content="BidEyes: Pre-bid risk review for electrical subcontractors" />
+  <meta property="og:description" content="BidEyes reviews your drawings, specs and addenda before you bid and flags potential scope gaps and conflicts, each with a page citation." />
   <meta property="og:image" content="https://hvax.dev/og-image.png" />
+  <meta property="og:site_name" content="BidEyes" />
   <meta property="og:url" content="https://hvax.dev" />
   <meta name="twitter:card" content="summary_large_image" />
   
@@ -25,55 +26,42 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://hvax.dev/#organization",
+      "@type": "SoftwareApplication",
+      "@id": "https://hvax.dev/#software",
       "name": "BidEyes",
-      "alternateName": "HVAX",
       "url": "https://hvax.dev",
-      "sameAs": ["https://www.linkedin.com/company/hvax1dev"],
-      "logo": "https://hvax.dev/assets/raghav.png",
-      "description": "BidEyes is an AI-powered pre-bid risk review tool for commercial electrical contractors. Built on Claude (Anthropic).",
-      "email": "founder@hvax.dev",
-      "foundingDate": "2026-09-06",
-      "founder": {
-        "@type": "Person",
-        "name": "Raghav Sharma"
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Pre-bid risk review for commercial electrical subcontractors. Flags potential scope gaps and conflicts before you bid, each with a citation.",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "commercial electrical estimators"
       },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Delhi",
-        "addressRegion": "Delhi",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "founder@hvax.dev"
-      },
-      "knowsAbout": ["Commercial Electrical Estimating", "Preconstruction", "Artificial Intelligence", "Construction Bid Review"],
-      "disambiguatingDescription": "HVAX (developer of BidEyes) is a privately held AI startup founded in 2026 in Delhi, India. It is not affiliated with the NSE-listed HVAC equipment company HVAX Technologies."
+      "provider": {
+        "@type": "Organization",
+        "name": "HVAX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "hi Road",
+          "addressLocality": "New Delhi",
+          "addressRegion": "Delhi",
+          "postalCode": "110003",
+          "addressCountry": "IN"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Raghav Sharma"
+        }
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://hvax.dev/#website",
       "url": "https://hvax.dev",
-      "sameAs": ["https://www.linkedin.com/company/hvax1dev"],
-      "name": "BidEyes by HVAX",
-      "publisher": {
-        "@id": "https://hvax.dev/#organization"
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://hvax.dev/#software",
       "name": "BidEyes",
-      "url": "https://hvax.dev",
-      "sameAs": ["https://www.linkedin.com/company/hvax1dev"],
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "description": "AI pre-bid risk review for commercial electrical contractors, powered by Anthropic Claude.",
-      "author": {
-        "@id": "https://hvax.dev/#organization"
+      "publisher": {
+        "@type": "Organization",
+        "name": "HVAX"
       }
     }
   ]
@@ -93,45 +81,27 @@
 <!-- ════════════════════════════════════════
      NAV
 ════════════════════════════════════════ -->
-<nav class="nav" id="nav" aria-label="Main navigation">
-  <div class="container">
-    <div class="nav__inner">
-
-      <a href="#" class="nav__logo" aria-label="HVAX home" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none;">
-        <img src="assets/logo.png" alt="HVAX Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" />
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <span style="font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">HVAX</span>
-          <span style="color: var(--border-light); font-size: 1.1rem; font-weight: 300;">|</span>
-          <span style="font-size: 1.25rem; font-weight: 600; color: var(--accent);">BidEyes</span>
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none;">
+          <img src="assets/logo.png" alt="BidEyes Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" />
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">BidEyes</span>
+          </div>
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="sample-report.html">Sample report</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="request-pilot.html" class="btn btn--primary">Request pilot</a>
         </div>
-      </a>
-
-            <ul class="nav__links" role="list">
-        <li><a href="#product">Product</a></li>
-        <li><a href="#how">How It Works</a></li>
-                <li><a href="about.html">About</a></li>
-      </ul>
-
-      <div class="nav__actions">
-        <a href="mailto:founder@hvax.dev" class="btn btn--ghost">Contact</a>
-        <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Request pilot</a>
       </div>
-
-      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-
-    <div class="nav__mobile-menu" id="mobile-menu" role="menu">
-      <a href="#problem" role="menuitem">The Problem</a>
-      <a href="#product" role="menuitem">Product</a>
-      <a href="#finds" role="menuitem">Coverage</a>
-      <a href="#how" role="menuitem">How It Works</a>
-      <a href="#for-who" role="menuitem">Who It's For</a>
-      <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Request pilot</a>
-    </div>
-  </div>
-</nav>
+  </nav>
 
 
 <!-- ════════════════════════════════════════
@@ -145,20 +115,16 @@
 
       <div class="hero__eyebrow">
         <span class="live-dot" aria-hidden="true"></span>
-        HVAX &nbsp;·&nbsp; BidEyes
+        Currently in private beta
       </div>
 
-      <h1 class="hero__headline">
-        AI-powered pre-bid intelligence for commercial electrical contractors
-      </h1>
+      <h1 class="hero__headline">Pre-bid risk review for commercial electrical subcontractors.</h1>
 
-      <p class="hero__sub">
-        BidEyes acts as a second set of eyes for estimators. It reviews ITBs, drawings, specifications, addenda, and alternates to help surface potential bid risks, contradictions, and missing requirements before a bid goes out.
-      </p>
+      <p class="hero__sub">Upload your drawings, specs and addenda. BidEyes flags potential scope gaps and conflicts before you bid, each with a citation to the exact page.</p>
 
       <div class="hero__cta-row">
         <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Request pilot</a>
-        <a href="#how" class="btn btn--ghost btn--xl">See how it works</a>
+        <a href="sample-report.html" class="btn btn--ghost btn--xl">See a sample report</a>
       </div>
 
       <p class="hero__footnote">Built for commercial electrical estimators and preconstruction teams.</p>
@@ -335,7 +301,7 @@
 
       <!-- Right: copy -->
       <div class="product__copy reveal reveal--d1">
-        <div class="chip">BidEyes by HVAX</div>
+        <div class="chip">Currently in private beta</div>
         <h2 class="sec-title" id="product-heading">
           A second set of eyes on every bid package
         </h2>
@@ -594,7 +560,7 @@
     <div class="reveal reveal--d1" style="max-width: 600px; margin: 0 auto; text-align: center;">
       <img src="assets/raghav.png" alt="Raghav Sharma" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: var(--s-4); object-fit: cover; box-shadow: var(--sh-md);" />
       <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--s-1); color: var(--ink);">Raghav Sharma</h3>
-      <p style="font-size: var(--text-sm); color: var(--ink-muted); margin-bottom: var(--s-4);">Founder, HVAX</p>
+      <p style="font-size: var(--text-sm); color: var(--ink-muted); margin-bottom: var(--s-4);">Founder, BidEyes</p>
       <p style="font-size: var(--text-base); color: var(--ink-subtle); line-height: 1.6; margin-bottom: var(--s-5);">
         I built BidEyes after seeing how much risk commercial electrical estimators carry on every bid due to compressed timelines and massive document sets. BidEyes is designed to act as a tireless second set of eyes, surfacing hidden scope gaps and contradictions before the bid goes out.
       </p>
@@ -661,33 +627,19 @@
 <!-- ════════════════════════════════════════
      FOOTER
 ════════════════════════════════════════ -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__left">
-        <div class="footer__wordmark">HVAX</div>
-        <div class="footer__byline">BidEyes — AI Pre-Bid Document Review</div>
-        
-        <div class="footer__about">
-          <p>HVAX builds AI-native tools for difficult, information-heavy business workflows.<br/>BidEyes is our first product, designed specifically for commercial preconstruction.</p>
+  <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: var(--s-4); color: var(--ink-muted); font-size: var(--text-sm);">
+        <p>BidEyes is built and operated by HVAX, a sole proprietorship owned by Raghav Sharma. Founded March 2026. hi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
+        <div style="display: flex; gap: var(--s-4); flex-wrap: wrap;">
+          <a href="mailto:support@hvax.dev" style="color: var(--accent);">support@hvax.dev</a>
+          <a href="privacy.html" style="color: var(--accent);">Privacy</a>
+          <a href="terms.html" style="color: var(--accent);">Terms</a>
+          <a href="security.html" style="color: var(--accent);">Security</a>
         </div>
       </div>
-      
-      <div class="footer__right">
-        <nav class="footer__links" aria-label="Footer links">
-          <a href="about.html">About HVAX</a>
-                    <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-          <a href="mailto:founder@hvax.dev">founder@hvax.dev</a>
-          <a href="https://www.linkedin.com/company/hvax1dev" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </nav>
-        <div class="footer__copy">&copy; <span id="year"></span> BidEyes . All rights reserved.</div>
-        
-        
-        </div>
     </div>
-  </div>
-</footer>
+  </footer>
 <script src="script.js"></script>
 </body>
 </html>

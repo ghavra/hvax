@@ -3,32 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | HVAX & BidEyes</title>
-  <meta name="description" content="Learn about HVAX, the team behind BidEyes, and our mission to derisk commercial electrical estimating." />
+  <meta name="description" content="About BidEyes. Built and operated by Raghav Sharma for commercial electrical subcontractors.">
+  <title>About BidEyes | Operated by HVAX</title>
+  <meta property="og:title" content="About BidEyes | Operated by HVAX" />
+  <meta property="og:description" content="About BidEyes. Built and operated by Raghav Sharma for commercial electrical subcontractors." />
+  <meta property="og:site_name" content="BidEyes" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="container">
       <div class="nav__inner">
         <a href="index.html" class="nav__logo" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none;">
-          <img src="assets/logo.png" alt="HVAX Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" />
+          <img src="assets/logo.png" alt="BidEyes Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" />
           <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">HVAX</span>
-            <span style="color: var(--border-light); font-size: 1.1rem; font-weight: 300;">|</span>
-            <span style="font-size: 1.25rem; font-weight: 600; color: var(--accent);">BidEyes</span>
+            <span style="font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">BidEyes</span>
           </div>
         </a>
         <ul class="nav__links" role="list">
-          <li><a href="index.html#product">Product</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="sample-report.html">Sample report</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
         </ul>
         <div class="nav__actions">
-          <a href="index.html" class="btn btn--ghost">Back to Home</a>
+          <a href="request-pilot.html" class="btn btn--primary">Request pilot</a>
         </div>
       </div>
     </div>
@@ -36,79 +37,47 @@
 
   <section class="sec" style="padding-top: 140px;">
     <div class="container" style="max-width: 800px;">
-      <h1 class="sec-title">About BidEyes and HVAX</h1>
-      <p class="sec-sub" style="font-size: 1.1rem; max-width: 100%;">BidEyes is pre-bid risk review software for commercial electrical subcontractors. It is built and run by one person, and this page says plainly who that is and how the business is set up.</p>
+      <h1 class="sec-title">About BidEyes</h1>
       
       <div style="color: var(--ink); line-height: 1.7; margin-top: var(--s-8);">
-        
-        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">Company record</h3>
-        <div style="overflow-x: auto; margin-bottom: var(--s-6);">
-          <table style="width: 100%; border-collapse: collapse; text-align: left;">
-            <tr style="border-bottom: 1px solid var(--border-light);"><th style="padding: var(--s-3) 0; font-weight: 600; width: 35%;">Company</th><td style="padding: var(--s-3) 0;">HVAX</td></tr>
-            <tr style="border-bottom: 1px solid var(--border-light);">
-              <th style="padding: var(--s-3) 0; font-weight: 600;">Legal status</th>
-              <td style="padding: var(--s-3) 0;">Sole proprietorship (not a registered company)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border-light);">
-              <th style="padding: var(--s-3) 0; font-weight: 600;">Owner and founder</th>
-              <td style="padding: var(--s-3) 0;">Raghav Sharma (<a href="https://www.linkedin.com/in/raghav-s-a197ab220" style="color: var(--accent);" target="_blank" rel="noopener noreferrer">LinkedIn</a>)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border-light);">
-              <th style="padding: var(--s-3) 0; font-weight: 600;">Founded</th>
-              <td style="padding: var(--s-3) 0;">March 2026</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border-light);">
-              <th style="padding: var(--s-3) 0; font-weight: 600;">Product status</th>
-              <td style="padding: var(--s-3) 0;">Private beta</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border-light);">
-              <th style="padding: var(--s-3) 0; font-weight: 600;">Registered address</th>
-              <td style="padding: var(--s-3) 0;">
-                India Habitat Centre<br/>
-                Lodhi Road<br/>
-                New Delhi, Delhi &ndash; 110003<br/>
-                India
-              </td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border-light);">
-              <th style="padding: var(--s-3) 0; font-weight: 600;">Jurisdiction</th>
-              <td style="padding: var(--s-3) 0;">Delhi, India</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border-light);">
-              <th style="padding: var(--s-3) 0; font-weight: 600;">Website</th>
-              <td style="padding: var(--s-3) 0;"><a href="https://hvax.dev" style="color: var(--accent);">https://hvax.dev</a></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border-light);">
-              <th style="padding: var(--s-3) 0; font-weight: 600;">Business enquiries</th>
-              <td style="padding: var(--s-3) 0;"><a href="mailto:founder@hvax.dev" style="color: var(--accent);">founder@hvax.dev</a></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border-light);">
-              <th style="padding: var(--s-3) 0; font-weight: 600;">Support</th>
-              <td style="padding: var(--s-3) 0;"><a href="mailto:founder@hvax.dev" style="color: var(--accent);">founder@hvax.dev</a></td>
-            </tr>
-          </table>
-        </div>
+        <p style="font-size: var(--text-lg); font-weight: 500; color: var(--ink); margin-bottom: var(--s-8);">BidEyes is pre-bid risk review software for commercial electrical subcontractors. It is built and run by Raghav Sharma.</p>
 
-        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">Legal status</h3>
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-top: var(--s-6); margin-bottom: var(--s-2);">Legal status</h3>
         <p>HVAX is the trading name of a sole proprietorship owned and operated by Raghav Sharma. It is not incorporated and does not have a company registration number (CIN). Any agreement for BidEyes, including pilots, is with Raghav Sharma trading as HVAX.</p>
 
-        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">What BidEyes does</h3>
-        <p>Estimators upload drawings, specifications and addenda. BidEyes surfaces potential scope gaps and conflicts, such as a mismatch between a drawing and a spec section, each with a citation to the source page, so the estimator can check it before the bid goes out.</p>
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-top: var(--s-6); margin-bottom: var(--s-2);">What BidEyes does</h3>
+        <p>BidEyes helps commercial electrical estimators review bid packages—ITBs, drawings, specifications, addenda and alternates—to surface potential scope gaps and conflicts before the bid goes out. Each finding cites the exact page it was found on.</p>
 
-        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">Who builds it</h3>
-        <p>Raghav Sharma founded BidEyes in March 2026 and builds, runs and supports it personally. When you write to the founder address, he reads and answers it.</p>
-        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">Your bid documents</h3>
-        <p>How a document moves through BidEyes, how long it is kept, and what is and isn't used for model training is set out on the <a href="privacy.html" style="color: var(--accent);">security and data handling page</a>.</p>
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-top: var(--s-6); margin-bottom: var(--s-2);">Who builds it</h3>
+        <p>Raghav Sharma founded BidEyes in March 2026 and builds, runs and supports it personally.</p>
+        <!-- [FILL IN: Add your real estimating background here: roles, years, projects] -->
 
-        <h3 style="font-size: var(--text-lg); font-weight: 600; margin-top: var(--s-6); margin-bottom: var(--s-2);">Contact us</h3>
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-top: var(--s-6); margin-bottom: var(--s-2);">How AI is used</h3>
+        <p>BidEyes uses the Claude API from Anthropic to assist with evidence extraction and drafting. It does not replace estimating judgment, code review or contractual advice.</p>
+
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-top: var(--s-6); margin-bottom: var(--s-2);">Contact us</h3>
         <p>For business enquiries, partnerships or general questions, write to the founder. For help using BidEyes, write to support.</p>
         <ul style="list-style: none; padding: 0; margin-top: var(--s-2);">
           <li style="margin-bottom: 0.5rem;"><strong>Founder:</strong> <a href="mailto:founder@hvax.dev" style="color: var(--accent);">founder@hvax.dev</a></li>
-          <li><strong>Support:</strong> <a href="mailto:founder@hvax.dev" style="color: var(--accent);">founder@hvax.dev</a></li>
+          <li><strong>Support:</strong> <a href="mailto:support@hvax.dev" style="color: var(--accent);">support@hvax.dev</a></li>
         </ul>
 
       </div>
     </div>
   </section>
-  </body>
+
+  <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: var(--s-4); color: var(--ink-muted); font-size: var(--text-sm);">
+        <p>BidEyes is built and operated by HVAX, a sole proprietorship owned by Raghav Sharma. Founded March 2026. hi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
+        <div style="display: flex; gap: var(--s-4); flex-wrap: wrap;">
+          <a href="mailto:support@hvax.dev" style="color: var(--accent);">support@hvax.dev</a>
+          <a href="privacy.html" style="color: var(--accent);">Privacy</a>
+          <a href="terms.html" style="color: var(--accent);">Terms</a>
+          <a href="security.html" style="color: var(--accent);">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
