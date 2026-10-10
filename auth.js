@@ -1,16 +1,15 @@
 // auth.js
 // Configuration
 // 1. Log in to your Clerk Dashboard: https://dashboard.clerk.com
-// 2. Go to "API Keys" -> "Quick Copy" -> "JavaScript".
-// 3. Find your Publishable Key and Frontend API URL from that snippet.
-// 4. Replace the placeholders below.
+// 2. Go to "API Keys".
+// 3. Find your Publishable Key.
+// 4. Replace the placeholder below.
 const CLERK_PUBLISHABLE_KEY = 'pk_test_YOUR_CLERK_PUBLISHABLE_KEY_HERE';
-const CLERK_FRONTEND_API_URL = 'YOUR_FRONTEND_API_URL_HERE'; // e.g., 'pleasing-marmot-71.clerk.accounts.dev'
+const CLERK_FRONTEND_API_URL = 'https://prepared-muskox-1353.clerk.accounts.dev';
 
-// The script paths exactly as shown in your dashboard snippet. 
-// Replace the entire URLs if your Quick Copy shows different versions or paths.
-const CLERK_UI_SCRIPT_URL = `https://${CLERK_FRONTEND_API_URL}/npm/@clerk/clerk-js@5/dist/clerk-ui.browser.js`;
-const CLERK_CORE_SCRIPT_URL = `https://${CLERK_FRONTEND_API_URL}/npm/@clerk/clerk-js@5/dist/clerk.browser.js`;
+// The script paths as derived from your provided Frontend API URL
+const CLERK_UI_SCRIPT_URL = `${CLERK_FRONTEND_API_URL}/npm/@clerk/clerk-js@5/dist/clerk-ui.browser.js`;
+const CLERK_CORE_SCRIPT_URL = `${CLERK_FRONTEND_API_URL}/npm/@clerk/clerk-js@5/dist/clerk.browser.js`;
 
 async function loadScript(src, attributes = {}) {
   return new Promise((resolve, reject) => {
@@ -29,12 +28,6 @@ async function loadScript(src, attributes = {}) {
 async function initClerk() {
   if (!CLERK_PUBLISHABLE_KEY || CLERK_PUBLISHABLE_KEY === 'pk_test_YOUR_CLERK_PUBLISHABLE_KEY_HERE') {
     console.error('Clerk Publishable Key is missing! Live authentication testing is blocked.');
-    showFallbackButtons();
-    return;
-  }
-
-  if (!CLERK_FRONTEND_API_URL || CLERK_FRONTEND_API_URL === 'YOUR_FRONTEND_API_URL_HERE') {
-    console.error('Clerk Frontend API URL is missing! Live authentication testing is blocked.');
     showFallbackButtons();
     return;
   }
