@@ -114,7 +114,7 @@
 
       <div class="nav__actions">
         <a href="mailto:founder@hvax.dev" class="btn btn--ghost">Contact</a>
-        <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Get in touch about early access</a>
+        <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Request pilot</a>
       </div>
 
       <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -128,7 +128,7 @@
       <a href="#finds" role="menuitem">Coverage</a>
       <a href="#how" role="menuitem">How It Works</a>
       <a href="#for-who" role="menuitem">Who It's For</a>
-      <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Get in touch about early access</a>
+      <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Request pilot</a>
     </div>
   </div>
 </nav>
@@ -157,7 +157,7 @@
       </p>
 
       <div class="hero__cta-row">
-        <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Get in touch about early access</a>
+        <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Request pilot</a>
         <a href="#how" class="btn btn--ghost btn--xl">See how it works</a>
       </div>
 
@@ -377,7 +377,7 @@
         </ul>
 
         <div>
-          <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Get in touch about early access</a>
+          <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Request pilot</a>
         </div>
       </div>
 
@@ -447,60 +447,139 @@
      HOW IT WORKS
 ════════════════════════════════════════ -->
 <section id="how" class="sec" aria-labelledby="how-heading">
-  <div class="container">
-    <div class="sec-head--center">
-      <h2 class="sec-title reveal" id="how-heading">How it works</h2>
-    </div>
-    <div class="hw-grid">
-      <div class="hw-step reveal reveal--d1">
-        <div class="hw-step__num" aria-hidden="true">1</div>
-        <h3 class="hw-step__title">Planned: you provide the bid documents</h3>
-        
-      </div>
-      <div class="hw-step reveal reveal--d2">
-        <div class="hw-step__num" aria-hidden="true">2</div>
-        <h3 class="hw-step__title">Planned: the pipeline reviews them</h3>
-        <p class="hw-step__desc">Our system processes the files to identify potential issues.</p>
-      </div>
-      <div class="hw-step reveal reveal--d3">
-        <div class="hw-step__num" aria-hidden="true">3</div>
-        <h3 class="hw-step__title">Planned: you receive a report</h3>
-        <p class="hw-step__desc">You receive a report with exact page citations.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════
-     CLAUDE INTEGRATION
-════════════════════════════════════════ -->
-<section id="claude-integration" class="sec" style="background: var(--surface-2);" aria-labelledby="claude-heading">
-  <div class="container">
-    <div class="sec-head--center">
-            <h2 class="sec-title reveal reveal--d1" id="claude-heading">Claude integration</h2>
-      <p class="sec-sub reveal reveal--d2">We are building on the Anthropic Claude API for document analysis.</p>
-    </div>
+  <div class="container" style="max-width: 900px;">
     
-    <div class="finds-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-      
-      <div class="pf-card reveal reveal--d2">
-        <div class="pf-card__icon" aria-hidden="true" style="background: rgba(217,119,87,0.1); color: #d97757;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-        </div>
-        <div class="fi__title">Document Processing</div>
-        <div class="fi__desc">We process the package—specs, drawings, and addenda—to check for contradictions.</div>
-      </div>
+    <div class="sec-head--center" style="margin-bottom: var(--s-8);">
+      <h2 class="sec-title reveal" id="how-heading">How BidEyes works</h2>
+      <p class="sec-sub reveal reveal--d1" style="max-width: 100%;">
+        Pre-bid risk review for commercial electrical subcontractors.
+      </p>
+      <p class="reveal reveal--d2" style="font-size: 1.125rem; color: var(--ink-muted); margin-top: var(--s-4);">
+        You send the bid package. Our pipeline reads it, compares the documents against each other, and returns findings an estimator can check in minutes, each with a citation to the exact page.
+      </p>
+    </div>
 
-      <div class="pf-card reveal reveal--d3">
-        <div class="pf-card__icon" aria-hidden="true" style="background: rgba(217,119,87,0.1); color: #d97757;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-        </div>
-        <div class="fi__title">Source-Cited Findings</div>
-        <div class="fi__desc">Findings are designed to cite the source document and page.</div>
-      </div>
+    <!-- The pipeline image -->
+    <div class="reveal reveal--d3" style="text-align: center; margin-bottom: var(--s-10);">
+      <img src="assets/bideyes-how-it-works-pipeline.png" alt="Diagram of the BidEyes review pipeline. ITBs, drawings, specifications, addenda and alternates enter a five-step process: read and index, map what changed, Claude reads across documents, check the evidence, and estimator review. Outputs are a pre-bid control sheet, an addenda delta page, RFI-ready questions, and a citation on every finding." style="max-width: 100%; height: auto; border-radius: var(--r-lg); box-shadow: var(--sh-md); border: 1px solid var(--border-light);" />
+    </div>
 
+    <!-- In / out summary -->
+    <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-6); margin-bottom: var(--s-10); padding: var(--s-6); background: var(--surface-2); border-radius: var(--r-lg);">
+      <div>
+        <h4 style="font-weight: 700; margin-bottom: var(--s-3); color: var(--ink);">IN</h4>
+        <p style="color: var(--ink-muted);">ITBs, drawings, specifications, addenda, alternates and the bid form.</p>
+      </div>
+      <div>
+        <h4 style="font-weight: 700; margin-bottom: var(--s-3); color: var(--ink);">OUT</h4>
+        <p style="color: var(--ink-muted);">A pre-bid control sheet (priority, issue, source, bid impact, action, owner, status), an addenda delta page, RFI-ready questions, and a citation on every finding. For example: a mismatch between a drawing and a spec section, with the sheet, the section, and the exact wording from each.</p>
       </div>
     </div>
+
+    <!-- Step by Step -->
+    <div class="reveal">
+      <h3 style="font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--s-6);">Step by step</h3>
+      
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--border-light);">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2);">1. Read and index (our code)</h4>
+        <p style="color: var(--ink-muted);">Every page of your package becomes a record that carries its document, page number, sheet number and spec section. Scanned pages are read with OCR. Any page we cannot read is listed in your report so you know what was not covered. Your report states how many pages were reviewed.</p>
+      </div>
+
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--border-light);">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2);">2. Map what changed (our code)</h4>
+        <p style="color: var(--ink-muted);">Late addenda are where bids go wrong. We build a change map: which sheets were reissued, which spec sections an addendum replaced, added or deleted, and which alternates or bid-form lines changed. We also sort pages by topic so each request to Claude contains only what it needs.</p>
+      </div>
+
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--accent); background: rgba(26,86,219,0.03); padding-top: var(--s-4); padding-bottom: var(--s-4); border-radius: 0 var(--r-md) var(--r-md) 0;">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2); color: var(--accent);">3. Claude reads across documents (Claude API from Anthropic)</h4>
+        <p style="color: var(--ink-muted);">BidEyes uses the Claude API from Anthropic to extract evidence and draft findings. For each topic, drawing sheets, spec sections and the relevant addenda are placed in the same request, so Claude can read across them and compare what each one says. Topics include scope boundaries, drawing versus spec conflicts, addenda impact, long-lead equipment, contract terms, schedule and phasing, alternates, and testing requirements. Claude must return every finding with an exact quote and a page reference. It is not allowed to return a finding without evidence.</p>
+      </div>
+
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--border-light);">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2);">4. Check the evidence (our code and Claude)</h4>
+        <p style="color: var(--ink-muted);">Our code checks that every quote appears word for word on the page it cites. Claims that something is missing from scope are searched for across the whole package, and dropped if the item is covered elsewhere. A second request then tries to disprove each remaining finding, including checking whether a later addendum already resolved it. Anything that fails is discarded, and the reason is logged.</p>
+      </div>
+
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--border-light);">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2);">5. Estimator review (people)</h4>
+        <p style="color: var(--ink-muted);">The founder reviews every high-priority finding before the report is delivered. You receive a short list, with borderline items kept separate. Your estimator checks each citation and makes the final call.</p>
+      </div>
+    </div>
+
+    <!-- What Claude Does and Does Not Do -->
+    <div class="reveal" style="margin-top: var(--s-10); padding: var(--s-6); border: 1px solid var(--border-light); border-radius: var(--r-lg);">
+      <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--s-4);">What Claude does and does not do</h3>
+      <p style="color: var(--ink-muted); margin-bottom: var(--s-3);">Claude assists with evidence extraction and drafting. It does not replace estimating judgment, code review, or contractual advice.</p>
+      <p style="color: var(--ink-muted); margin-bottom: var(--s-3);">BidEyes can miss items and can flag things that turn out not to be issues. That is why every finding carries a citation and is reviewed by a person before it reaches you.</p>
+      <p style="color: var(--ink-muted);">Flags potential risks for estimator review. It does not guarantee that no scope is missed.</p>
+    </div>
+
+    <!-- Illustrative Example -->
+    <div class="reveal" style="margin-top: var(--s-10);">
+      <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--s-2);">Illustrative Example</h3>
+      <p style="font-size: var(--text-sm); color: var(--ink-subtle); margin-bottom: var(--s-4);">Not from a real project.</p>
+      
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-sm);">
+        <div style="padding: var(--s-4); border-bottom: 1px solid var(--border-light); background: var(--surface-2); display: flex; gap: var(--s-3); align-items: center; flex-wrap: wrap;">
+          <span style="font-weight: 600; color: var(--ink);">Finding F-07</span>
+          <span style="font-size: var(--text-xs); background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 12px; font-weight: 600;">Priority 1</span>
+          <span style="font-size: var(--text-xs); background: #f1f5f9; color: #475569; padding: 2px 8px; border-radius: 12px;">What changes: price, scope</span>
+          <span style="font-size: var(--text-xs); background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 12px;">RFI-ready</span>
+        </div>
+        <div style="padding: var(--s-4);">
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Claim:</strong>
+            <span>Panel schedule and specification disagree on the main breaker rating.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Evidence 1:</strong>
+            <span style="font-family: monospace; font-size: 0.9em; background: rgba(0,0,0,0.03); padding: 2px 4px; border-radius: 4px;">Sheet E-301, panel schedule: "[exact quote]"</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Evidence 2:</strong>
+            <span style="font-family: monospace; font-size: 0.9em; background: rgba(0,0,0,0.03); padding: 2px 4px; border-radius: 4px;">Spec 26 24 16, Part 2: "[exact quote]"</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Check:</strong>
+            <span>Searched the full package for other references. None found.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Action:</strong>
+            <span>Ask the engineer to confirm, or carry the higher rating.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2);">
+            <strong style="color: var(--ink-muted);">Status:</strong>
+            <span style="color: var(--emerald); font-weight: 500;">Verified by code. Reviewed by founder.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model and Pipeline Facts -->
+    <div class="reveal" style="margin-top: var(--s-10);">
+      <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--s-4);">Model and pipeline facts</h3>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: var(--text-sm);">
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <th style="padding: var(--s-3) 0; font-weight: 600; width: 35%; color: var(--ink-muted);">Model used for review passes</th>
+            <td style="padding: var(--s-3) 0;"><span style="color: #d97757; font-weight: 600;">[FILL IN: exact model name your code calls]</span></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <th style="padding: var(--s-3) 0; font-weight: 600; color: var(--ink-muted);">Model used for the checking pass</th>
+            <td style="padding: var(--s-3) 0;"><span style="color: #d97757; font-weight: 600;">[FILL IN: exact model name, or "same model"]</span></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <th style="padding: var(--s-3) 0; font-weight: 600; color: var(--ink-muted);">How documents are sent</th>
+            <td style="padding: var(--s-3) 0;">Page-level text, filtered by topic, one request per topic. The whole package is never sent in a single request.</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <th style="padding: var(--s-3) 0; font-weight: 600; color: var(--ink-muted);">Account</th>
+            <td style="padding: var(--s-3) 0;">BidEyes's own commercial Anthropic API account.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -529,19 +608,33 @@
 
 
 <!-- ════════════════════════════════════════
-     TRUST & LIMITS
+     YOUR BID DOCUMENTS
 ════════════════════════════════════════ -->
 <section class="sec" style="background-color: var(--surface-2);" aria-labelledby="trust-heading">
-  <div class="container" style="max-width: 720px; margin: 0 auto; text-align: center;">
-    <h2 class="sec-title reveal" id="trust-heading" style="font-size: var(--text-xl); margin-bottom: var(--s-4);">Your documents, handled carefully</h2>
-    <p class="reveal reveal--d1" style="font-size: var(--text-base); color: var(--ink-muted); line-height: 1.6; margin-bottom: var(--s-6);">
-      Files are stored securely during processing, kept only as long as needed for review, accessible only by authorized personnel, deleted immediately upon request, and an NDA is available.
-    </p>
+  <div class="container" style="max-width: 720px; margin: 0 auto;">
+    <h2 class="sec-title reveal" id="trust-heading" style="font-size: var(--text-xl); margin-bottom: var(--s-6); text-align: center;">Your bid documents</h2>
     
-    <div class="reveal reveal--d2" style="padding: var(--s-4); border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface);">
-      <p style="font-size: var(--text-sm); color: var(--ink-muted); margin: 0;">
-        <strong>Note:</strong> BidEyes flags and prioritizes. Every finding cites its source, and the estimator makes the final call.
-      </p>
+    <ul class="reveal reveal--d1" style="list-style: none; padding: 0; margin: 0; color: var(--ink-muted); line-height: 1.6;">
+      <li style="margin-bottom: var(--s-3); padding-left: var(--s-4); position: relative;">
+        <span style="position: absolute; left: 0; color: var(--accent);">&bull;</span>
+        Processed through the Claude API under Anthropic's commercial terms. Anthropic does not train its models on API customer content by default. <a href="https://www.anthropic.com/legal/commercial-terms" style="color: var(--accent);" target="_blank" rel="noopener noreferrer">Read Anthropic's current commercial terms</a>.
+      </li>
+      <li style="margin-bottom: var(--s-3); padding-left: var(--s-4); position: relative;">
+        <span style="position: absolute; left: 0; color: var(--accent);">&bull;</span>
+        Anthropic is a subprocessor for the text we send to it. <span style="color: #d97757; font-weight: 600;">[FILL IN: Add any other subprocessors, or "none".]</span>
+      </li>
+      <li style="margin-bottom: var(--s-3); padding-left: var(--s-4); position: relative;">
+        <span style="position: absolute; left: 0; color: var(--accent);">&bull;</span>
+        Our copies of your documents are stored on <span style="color: #d97757; font-weight: 600;">[FILL IN: location]</span> and deleted <span style="color: #d97757; font-weight: 600;">[FILL IN: N]</span> days after the review is delivered.
+      </li>
+      <li style="margin-bottom: var(--s-3); padding-left: var(--s-4); position: relative;">
+        <span style="position: absolute; left: 0; color: var(--accent);">&bull;</span>
+        Only Raghav Sharma can access your documents.
+      </li>
+    </ul>
+    
+    <div class="reveal reveal--d2" style="text-align: center; margin-top: var(--s-6);">
+      <a href="privacy.html" class="btn btn--ghost">See full security and data handling page</a>
     </div>
   </div>
 </section>
@@ -555,7 +648,7 @@
       <div class="chip reveal">Get started</div>
       <h2 class="sec-title reveal reveal--d1" id="cta-heading">Interested in early access?</h2>
       <p class="sec-sub reveal reveal--d2" style="font-size: var(--text-base);">BidEyes is in early development. If you are a commercial electrical estimator and would like to hear when it is ready, email <a href="mailto:founder@hvax.dev">founder@hvax.dev</a>.</p>
-      <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Get in touch about early access</a>
+      <a href="mailto:founder@hvax.dev" class="btn btn--primary btn--xl reveal reveal--d3">Request pilot</a>
       <p class="final-cta__note reveal reveal--d4">
         Questions? Email <a href="mailto:founder@hvax.dev">founder@hvax.dev</a>
           <a href="https://www.linkedin.com/company/hvax1dev" target="_blank" rel="noopener noreferrer">LinkedIn</a>
