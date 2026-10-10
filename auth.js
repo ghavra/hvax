@@ -13,8 +13,11 @@ async function initClerk() {
       await window.Clerk.load();
       updateNavigation();
       mountClerkComponents();
-    } catch (err) {
+        } catch (err) {
       console.error('Error initializing Clerk: ', err);
+      // Fallback: show the buttons even if Clerk fails (e.g. invalid placeholder key)
+      const authActions = document.getElementById('auth-actions');
+      if (authActions) authActions.style.display = 'flex';
     }
   };
   document.body.appendChild(script);
