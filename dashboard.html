@@ -47,16 +47,21 @@
     <div class="container" style="max-width: 900px;">
       <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-lg); padding: var(--s-8); box-shadow: var(--sh-md);">
         <h1 class="sec-title" style="margin-bottom: var(--s-2);">Welcome to BidEyes</h1>
-        <p style="color: var(--ink-muted); font-size: var(--text-lg); margin-bottom: var(--s-8);">You have successfully signed in to your account.</p>
+        <p style="color: var(--ink-muted); font-size: var(--text-lg); margin-bottom: var(--s-8);">Your account has been successfully verified.</p>
         
-        <div style="background: var(--surface-2); padding: var(--s-6); border-radius: var(--r-md); border: 1px solid var(--border-light);">
-          <h3 style="font-size: var(--text-lg); margin-bottom: var(--s-3);">Dashboard Initialization</h3>
+        <div style="background: var(--surface-2); padding: var(--s-6); border-radius: var(--r-md); border: 1px solid var(--border-light); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent);"></div>
+          <h3 style="font-size: var(--text-lg); margin-bottom: var(--s-3);">Workspace Provisioning</h3>
           <p style="color: var(--ink-muted); line-height: 1.6;">
-            We are currently in a Private Beta. Your account has been created, but project uploads and backend processing require authorization.
+            BidEyes is currently operating in a curated Private Beta. Because we process confidential estimating documents, we do not utilize automated self-serve uploads at this stage.
           </p>
           <p style="color: var(--ink-muted); line-height: 1.6; margin-top: var(--s-3);">
-            For real enterprise security, data models and API access must be protected at the server-level, not just through frontend redirects. Our engineering team is finalizing the secure storage architecture for customer bid packages.
+            Your account is currently in the queue for manual provisioning. A member of our engineering team will reach out to the email you signed up with to establish your secure document pipeline, confirm our data agreements, and initiate your pilot.
           </p>
+          <div style="margin-top: var(--s-6); display: flex; gap: 12px; align-items: center;">
+            <span style="display: inline-flex; width: 10px; height: 10px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(239, 137, 67, 0.2);"></span>
+            <span style="font-size: var(--text-sm); font-weight: 600; color: var(--ink);">Status: Pending Activation</span>
+          </div>
         </div>
       </div>
     </div>
