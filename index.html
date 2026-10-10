@@ -412,6 +412,58 @@
 
 
 <!-- ════════════════════════════════════════
+     TRACTION / BENCHMARK
+════════════════════════════════════════ -->
+<section class="sec" aria-labelledby="benchmark-heading" style="background: var(--surface-1); padding-top: var(--s-10); padding-bottom: var(--s-10);">
+  <div class="container" style="max-width: 900px;">
+    
+    <div style="margin-bottom: var(--s-8); text-align: center;">
+      <div class="chip reveal">Performance Benchmark</div>
+      <h2 id="benchmark-heading" class="sec-title" style="margin-top: var(--s-4);">Testing against historical bid packages</h2>
+      <p class="sec-sub" style="font-size: var(--text-lg); color: var(--ink-subtle); max-width: 700px; margin: 0 auto;">To measure accuracy without exposing active pilots, we run BidEyes against closed, historical electrical bids to find the risks that manual review misses.</p>
+    </div>
+
+    <div class="reveal reveal--d1" style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-lg); padding: var(--s-8); box-shadow: var(--sh-md);">
+      <div style="display: flex; flex-wrap: wrap; gap: var(--s-6); margin-bottom: var(--s-6); padding-bottom: var(--s-6); border-bottom: 1px solid var(--border-light);">
+        <div style="flex: 1; min-width: 250px;">
+          <strong style="display: block; color: var(--ink-muted); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Dataset</strong>
+          <span style="font-size: var(--text-lg); font-weight: 600; color: var(--ink);">Troy School District (Historical)</span>
+          <span style="display: block; color: var(--ink-muted); margin-top: 4px;">~888 pages: MEP Manual + 4 Addenda</span>
+        </div>
+        <div style="flex: 1; min-width: 250px;">
+          <strong style="display: block; color: var(--ink-muted); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Baseline Method</strong>
+          <span style="font-size: var(--text-lg); font-weight: 600; color: var(--ink);">Manual PDF text search</span>
+          <span style="display: block; color: var(--ink-muted); margin-top: 4px;">Requires reading addenda and specs side-by-side</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom: var(--s-6);">
+        <strong style="display: block; color: var(--ink-muted); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--s-4);">What the pipeline caught</strong>
+        <ul style="list-style: none; padding: 0; margin: 0; color: var(--ink);">
+          <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: var(--s-3);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="line-height: 1.5;"><strong>$150K exposure:</strong> Found a temporary-power allowance stated twice with conflicting wording across different sections.</span>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: var(--s-3);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="line-height: 1.5;"><strong>Scope conflict:</strong> Spotted that Addendum 1 removed theatre lighting from the text, but the fixture package was accidentally left in the scope list.</span>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 12px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="line-height: 1.5;"><strong>Output:</strong> Generated 10 surfaced risks (4 Priority-1) and drafted 8 exact RFI-ready questions with verbatim page citations.</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div style="background: var(--surface-2); padding: var(--s-4); border-radius: 8px; font-size: var(--text-sm); color: var(--ink-muted); border: 1px solid var(--border-light);">
+        <strong>Program note:</strong> To maintain strict data privacy, we do not publish active customer pilot data. This benchmark demonstrates our Claude 3.5 Sonnet extraction methodology on a closed, historical project.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
      FOUNDER
 ════════════════════════════════════════ -->
 <section class="sec" aria-labelledby="founder-heading">
