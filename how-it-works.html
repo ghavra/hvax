@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Meta Tags -->
+  <title>How BidEyes works | Pre-bid risk review</title>
+  <meta name="description" content="How BidEyes reads your drawings, specs and addenda, compares them, and returns findings with a citation to the exact page. Every finding is reviewed by a person.">
+  <link rel="canonical" href="https://hvax.dev" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="BidEyes: Pre-bid risk review for electrical subcontractors" />
+  <meta property="og:description" content="BidEyes reviews your drawings, specs and addenda before you bid and flags potential scope gaps and conflicts, each with a page citation." />
+  <meta property="og:image" content="https://hvax.dev/og-image.png" />
+  <meta property="og:site_name" content="BidEyes" />
+  <meta property="og:url" content="https://hvax.dev" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <meta name="theme-color" content="#0a0c10" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://hvax.dev/#software",
+      "name": "BidEyes",
+      "url": "https://hvax.dev",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Pre-bid risk review for commercial electrical subcontractors. Flags potential scope gaps and conflicts before you bid, each with a citation.",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "commercial electrical estimators"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "HVAX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "hi Road",
+          "addressLocality": "New Delhi",
+          "addressRegion": "Delhi",
+          "postalCode": "110003",
+          "addressCountry": "IN"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Raghav Sharma"
+        }
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hvax.dev/#website",
+      "url": "https://hvax.dev",
+      "name": "BidEyes",
+      "publisher": {
+        "@type": "Organization",
+        "name": "HVAX"
+      }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+<nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none;">
+          <img src="assets/logo.png" alt="BidEyes Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" />
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">BidEyes</span>
+          </div>
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="sample-report.html">Sample report</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="request-pilot.html" class="btn btn--primary">Request pilot</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<section id="how" class="sec" aria-labelledby="how-heading">
+  <div class="container" style="max-width: 900px;">
+    
+    <div class="sec-head--center" style="margin-bottom: var(--s-8);">
+      <h2 class="sec-title reveal" id="how-heading">How BidEyes works</h2>
+      <p class="sec-sub reveal reveal--d1" style="max-width: 100%;">
+        Pre-bid risk review for commercial electrical subcontractors.
+      </p>
+      <p class="reveal reveal--d2" style="font-size: 1.125rem; color: var(--ink-muted); margin-top: var(--s-4);">
+        You send the bid package. Our pipeline reads it, compares the documents against each other, and returns findings an estimator can check in minutes, each with a citation to the exact page.
+      </p>
+    </div>
+
+    <!-- In / out summary -->
+    <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-6); margin-bottom: var(--s-10); padding: var(--s-6); background: var(--surface-2); border-radius: var(--r-lg);">
+      <div>
+        <h4 style="font-weight: 700; margin-bottom: var(--s-3); color: var(--ink);">IN</h4>
+        <p style="color: var(--ink-muted);">ITBs, drawings, specifications, addenda, alternates and the bid form.</p>
+      </div>
+      <div>
+        <h4 style="font-weight: 700; margin-bottom: var(--s-3); color: var(--ink);">OUT</h4>
+        <p style="color: var(--ink-muted);">A pre-bid control sheet (priority, issue, source, bid impact, action, owner, status), an addenda delta page, RFI-ready questions, and a citation on every finding. For example: a mismatch between a drawing and a spec section, with the sheet, the section, and the exact wording from each.</p>
+      </div>
+    </div>
+
+    <!-- Step by Step -->
+    <div class="reveal">
+            <h3 style="font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--s-6);">Step by step</h3>
+      
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--border-light);">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2);">1. Read and index (our code)</h4>
+        <p style="color: var(--ink-muted);">Every page of your package becomes a structured record with its document, page number, sheet number, discipline, spec section and the addendum it came from. We read drawing title blocks and sheet indexes, split specs by section, and OCR scanned pages. Everything goes into a searchable index that combines keyword and semantic search. Any page we cannot read is listed in your report, along with how many pages were reviewed.</p>
+      </div>
+
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--border-light);">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2);">2. Map what changed (our code)</h4>
+        <p style="color: var(--ink-muted);">Late addenda are where bids go wrong. We compare every addendum against the base package to find which sheets were reissued, which spec sections were replaced, added or deleted, and which alternates or bid-form lines changed. We also link the package together: sheet callouts, spec sections, RFI responses and the sheets they modify. This gives us a map of what is current and what has been superseded.</p>
+      </div>
+
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--border-light);">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2);">3. Find candidate risks (our code)</h4>
+        <p style="color: var(--ink-muted);">Rules built for electrical work scan the whole package for the things that cost subcontractors money: long-lead equipment, scope-boundary language, drawing and spec numbers that disagree, testing and commissioning requirements, and contract and schedule terms. For each topic, retrieval pulls only the passages that matter, with the relevant addenda attached. Claude never receives the whole package, only a focused set of evidence for each candidate.</p>
+      </div>
+
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--accent); background: rgba(26,86,219,0.03); padding-top: var(--s-4); padding-bottom: var(--s-4); border-radius: 0 var(--r-md) var(--r-md) 0;">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2); color: var(--accent);">4. Claude reviews the evidence (Claude API from Anthropic)</h4>
+        <p style="color: var(--ink-muted);">BidEyes uses the Claude API from Anthropic in three roles. A fast Claude model sorts and classifies the candidates. A stronger Claude model reads each evidence set side by side (drawings, specs and addenda) and decides whether they conflict, leave scope unclear, or change the price. It then drafts the finding. Claude must return every finding with an exact quote and a page reference. A finding without evidence is not allowed.</p>
+      </div>
+
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--border-light);">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2);">5. Check the evidence (our code and Claude)</h4>
+        <p style="color: var(--ink-muted);">Our code confirms that every quote appears word for word on the page it cites. Claims that something is missing from scope are searched for across the whole package and dropped if the item is covered elsewhere. We also check the change map to see whether a later addendum already resolved the issue. Then a separate Claude request tries to disprove each remaining finding. Anything that fails is discarded, and the reason is logged.</p>
+      </div>
+
+      <div style="margin-bottom: var(--s-6); padding-left: var(--s-4); border-left: 2px solid var(--border-light);">
+        <h4 style="font-weight: 700; margin-bottom: var(--s-2);">6. Estimator review (people)</h4>
+        <p style="color: var(--ink-muted);">The founder reviews every high-priority finding before the report is delivered. You receive a short list, with borderline items kept separate. Your estimator checks each citation and makes the final call.</p>
+      </div>
+    </div>
+
+    <!-- What Claude Does and Does Not Do -->
+    <div class="reveal" style="margin-top: var(--s-10); padding: var(--s-6); border: 1px solid var(--border-light); border-radius: var(--r-lg);">
+      <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--s-4);">What Claude does and does not do</h3>
+      <p style="color: var(--ink-muted); margin-bottom: var(--s-3);">Claude assists with evidence extraction and drafting. It does not replace estimating judgment, code review, or contractual advice.</p>
+      <p style="color: var(--ink-muted); margin-bottom: var(--s-3);">BidEyes can miss items and can flag things that turn out not to be issues. That is why every finding carries a citation and is reviewed by a person before it reaches you.</p>
+      <p style="color: var(--ink-muted);">Flags potential risks for estimator review. It does not guarantee that no scope is missed.</p>
+    </div>
+
+    <!-- Illustrative Example -->
+    <div class="reveal" style="margin-top: var(--s-10);">
+      <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--s-2);">Illustrative Example</h3>
+      <p style="font-size: var(--text-sm); color: var(--ink-subtle); margin-bottom: var(--s-4);">Not from a real project.</p>
+      
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-sm);">
+        <div style="padding: var(--s-4); border-bottom: 1px solid var(--border-light); background: var(--surface-2); display: flex; gap: var(--s-3); align-items: center; flex-wrap: wrap;">
+          <span style="font-weight: 600; color: var(--ink);">Finding F-07</span>
+          <span style="font-size: var(--text-xs); background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 12px; font-weight: 600;">Priority 1</span>
+          <span style="font-size: var(--text-xs); background: #f1f5f9; color: #475569; padding: 2px 8px; border-radius: 12px;">What changes: price, scope</span>
+          <span style="font-size: var(--text-xs); background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 12px;">RFI-ready</span>
+        </div>
+        <div style="padding: var(--s-4);">
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Claim:</strong>
+            <span>Panel schedule and specification disagree on the main breaker rating.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Evidence 1:</strong>
+            <span style="font-family: monospace; font-size: 0.9em; background: rgba(0,0,0,0.03); padding: 2px 4px; border-radius: 4px;">Sheet E-301, panel schedule: "MAIN BREAKER: 400 A"</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Evidence 2:</strong>
+            <span style="font-family: monospace; font-size: 0.9em; background: rgba(0,0,0,0.03); padding: 2px 4px; border-radius: 4px;">Spec 26 24 16, Part 2: "Main circuit breaker: 600 A frame, 100 percent rated"</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Check:</strong>
+            <span>Searched the full package for other references. None found.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2); margin-bottom: var(--s-3);">
+            <strong style="color: var(--ink-muted);">Action:</strong>
+            <span>Ask the engineer to confirm, or carry the higher rating.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: var(--s-2);">
+            <strong style="color: var(--ink-muted);">Status:</strong>
+            <span style="color: var(--emerald); font-weight: 500;">Verified by code. Reviewed by founder.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model and Pipeline Facts -->
+    <div class="reveal" style="margin-top: var(--s-10);">
+      <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--s-4);">Model and pipeline facts</h3>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: var(--text-sm);">
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <th style="padding: var(--s-3) 0; font-weight: 600; width: 35%; color: var(--ink-muted);">Model used for review passes</th>
+            <td style="padding: var(--s-3) 0;">Claude 3.5 Sonnet</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <th style="padding: var(--s-3) 0; font-weight: 600; color: var(--ink-muted);">Model used for the checking pass</th>
+            <td style="padding: var(--s-3) 0;">Claude 3.5 Sonnet</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <th style="padding: var(--s-3) 0; font-weight: 600; color: var(--ink-muted);">How documents are sent</th>
+            <td style="padding: var(--s-3) 0;">Page-level text, filtered by topic, one request per topic. The whole package is never sent in a single request.</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <th style="padding: var(--s-3) 0; font-weight: 600; color: var(--ink-muted);">Account</th>
+            <td style="padding: var(--s-3) 0;">BidEyes's own commercial Anthropic API account.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: var(--s-4); color: var(--ink-muted); font-size: var(--text-sm);">
+        <p>BidEyes is built and operated by HVAX, a sole proprietorship owned by Raghav Sharma. Founded March 2026. hi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
+        <div style="display: flex; gap: var(--s-4); flex-wrap: wrap;">
+          <a href="mailto:support@hvax.dev" style="color: var(--accent);">support@hvax.dev</a>
+          <a href="privacy.html" style="color: var(--accent);">Privacy</a>
+          <a href="terms.html" style="color: var(--accent);">Terms</a>
+          <a href="security.html" style="color: var(--accent);">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
