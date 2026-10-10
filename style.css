@@ -652,7 +652,7 @@ img, svg { display: block; }
 
 /* ── Problem Section ───────────────────────────────── */
 .problem {
-  background: var(--ink);
+  background: #0a0c10;
   position: relative;
   overflow: hidden;
 }
@@ -911,7 +911,7 @@ img, svg { display: block; }
 
 /* ── How It Works ──────────────────────────────────── */
 .how {
-  background: var(--ink);
+  background: #0a0c10;
   position: relative;
   overflow: hidden;
 }
@@ -1156,7 +1156,7 @@ img, svg { display: block; }
 
 /* ── Footer ────────────────────────────────────────── */
 .footer {
-  background: var(--ink);
+  background: #0a0c10;
   padding-block: var(--s-10);
 }
 
@@ -1734,8 +1734,7 @@ img, svg { display: block; }
   
   /* UI Tweaks for Dark Mode */
   .nav { background: rgba(10, 12, 16, 0.9) !important; border-bottom-color: var(--border-light) !important; }
-  .footer { background: var(--surface-2) !important; border-top-color: var(--border-light) !important; }
-  .btn--ghost { color: var(--ink); border-color: var(--border); }
+    .btn--ghost { color: var(--ink); border-color: var(--border); }
   .btn--ghost:hover { background: var(--surface-3); }
   
   /* Soften harsh white backgrounds on any specific hardcoded elements */
