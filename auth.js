@@ -1,10 +1,23 @@
 // auth.js
 // Configuration
+// 1. Log in to your Clerk Dashboard: https://dashboard.clerk.com
+// 2. Select your application.
+// 3. Go to "API Keys" in the sidebar.
+// 4. Copy the "Publishable Key" (it starts with pk_test_ for development)
+// 5. Paste it here, replacing the placeholder.
 const CLERK_PUBLISHABLE_KEY = 'pk_test_YOUR_CLERK_PUBLISHABLE_KEY_HERE';
 
 async function initClerk() {
+  if (!CLERK_PUBLISHABLE_KEY || CLERK_PUBLISHABLE_KEY === 'pk_test_YOUR_CLERK_PUBLISHABLE_KEY_HERE') {
+    console.error('Clerk Publishable Key is missing! Please configure it in auth.js.');
+    const authActions = document.getElementById('auth-actions');
+    if (authActions) authActions.style.display = 'flex';
+    return; // Stop initialization because SDK will crash without a valid key
+  }
+
   const script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/@clerk/clerk-js@5/dist/clerk.browser.js';
+  // Loading the latest official SDK version as per Clerk documentation
+  script.src = 'https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js';
   script.setAttribute('data-clerk-publishable-key', CLERK_PUBLISHABLE_KEY);
   script.crossOrigin = 'anonymous';
   
@@ -13,9 +26,9 @@ async function initClerk() {
       await window.Clerk.load();
       updateNavigation();
       mountClerkComponents();
-        } catch (err) {
+    } catch (err) {
       console.error('Error initializing Clerk: ', err);
-      // Fallback: show the buttons even if Clerk fails (e.g. invalid placeholder key)
+      // Fallback: show the buttons even if Clerk fails to load properly
       const authActions = document.getElementById('auth-actions');
       if (authActions) authActions.style.display = 'flex';
     }
@@ -33,7 +46,7 @@ function updateNavigation() {
     // === SIGNED IN STATE ===
     if (authActions) authActions.style.display = 'none';
     
-    if (userButtonMount) {
+    if (userButtonMount && !userButtonMount.hasChildNodes()) {
       // Create a container for signed-in actions
       const signedInContainer = document.createElement('div');
       signedInContainer.style.display = 'flex';
