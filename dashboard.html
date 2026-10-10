@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Request a pilot of BidEyes to review your drawings, specs and addenda before you bid.">
-  <title>Request a pilot | BidEyes</title>
+  <title>Dashboard | BidEyes</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
+  <style>
+    .dashboard-container {
+      padding: var(--s-10) var(--s-4);
+      min-height: 60vh;
+    }
+  </style>
 </head>
 <body>
-        <nav class="nav" id="nav" aria-label="Main navigation">
+  <!-- NAV (will be updated via script) -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="container">
       <div class="nav__inner">
         <a href="index.html" class="nav__logo" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none;">
@@ -28,8 +34,8 @@
         </ul>
         <div style="display: flex; align-items: center; gap: 16px;">
           <div class="nav__actions" id="auth-actions" style="display: none; gap: 16px; align-items: center;">
-            <a href="sign-in.html" class="btn btn--ghost" style="padding: 10px 16px;">Sign in</a>
-            <a href="sign-up.html" class="btn btn--primary" style="padding: 10px 16px;">Sign up</a>
+            <a href="sign-in.html" class="btn btn--ghost">Sign in</a>
+            <a href="sign-up.html" class="btn btn--primary">Sign up</a>
           </div>
           <div id="user-button-mount"></div>
         </div>
@@ -37,20 +43,30 @@
     </div>
   </nav>
 
-  <section class="sec" style="padding-top: 140px;">
-    <div class="container" style="max-width: 800px;">
-      <h1 class="sec-title">Request a Pilot</h1>
-      
-      <div style="color: var(--ink); line-height: 1.7; margin-top: var(--s-8);"><p style="font-size: var(--text-lg); margin-bottom: var(--s-6);">This page is currently being updated for our private beta.</p>
-<p>If you have any immediate questions, please email <a href="mailto:founder@hvax.dev" style="color: var(--accent);">founder@hvax.dev</a>.</p></div>
+  <main class="dashboard-container">
+    <div class="container" style="max-width: 900px;">
+      <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-lg); padding: var(--s-8); box-shadow: var(--sh-md);">
+        <h1 class="sec-title" style="margin-bottom: var(--s-2);">Welcome to BidEyes</h1>
+        <p style="color: var(--ink-muted); font-size: var(--text-lg); margin-bottom: var(--s-8);">You have successfully signed in to your account.</p>
+        
+        <div style="background: var(--surface-2); padding: var(--s-6); border-radius: var(--r-md); border: 1px solid var(--border-light);">
+          <h3 style="font-size: var(--text-lg); margin-bottom: var(--s-3);">Dashboard Initialization</h3>
+          <p style="color: var(--ink-muted); line-height: 1.6;">
+            We are currently in a Private Beta. Your account has been created, but project uploads and backend processing require authorization.
+          </p>
+          <p style="color: var(--ink-muted); line-height: 1.6; margin-top: var(--s-3);">
+            For real enterprise security, data models and API access must be protected at the server-level, not just through frontend redirects. Our engineering team is finalizing the secure storage architecture for customer bid packages.
+          </p>
+        </div>
+      </div>
     </div>
-  </section>
-    <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
+  </main>
+
+  <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
     <div class="container">
       <div style="display: flex; flex-direction: column; gap: var(--s-4); color: var(--ink-muted); font-size: var(--text-sm);">
-        <p>BidEyes is built and operated by HVAX, a sole proprietorship owned by Raghav Sharma. Founded March 2026. hi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
+        <p>BidEyes is built and operated by HVAX. Founded March 2026.</p>
         <div style="display: flex; gap: var(--s-4); flex-wrap: wrap;">
-          <a href="mailto:support@hvax.dev" style="color: var(--accent);">support@hvax.dev</a>
           <a href="privacy.html" style="color: var(--accent);">Privacy</a>
           <a href="terms.html" style="color: var(--accent);">Terms</a>
           <a href="security.html" style="color: var(--accent);">Security</a>
@@ -58,6 +74,7 @@
       </div>
     </div>
   </footer>
+
   <script src="auth.js"></script>
 </body>
 </html>
