@@ -1,39 +1,71 @@
 // auth.js
 // Configuration
 // 1. Log in to your Clerk Dashboard: https://dashboard.clerk.com
-// 2. Select your application.
-// 3. Go to "API Keys" in the sidebar.
-// 4. Copy the "Publishable Key" (it starts with pk_test_ for development)
-// 5. Paste it here, replacing the placeholder.
+// 2. Go to "API Keys" -> "Quick Copy" -> "JavaScript".
+// 3. Find your Publishable Key and Frontend API URL from that snippet.
+// 4. Replace the placeholders below.
 const CLERK_PUBLISHABLE_KEY = 'pk_test_YOUR_CLERK_PUBLISHABLE_KEY_HERE';
+const CLERK_FRONTEND_API_URL = 'YOUR_FRONTEND_API_URL_HERE'; // e.g., 'pleasing-marmot-71.clerk.accounts.dev'
+
+// The script paths exactly as shown in your dashboard snippet. 
+// Replace the entire URLs if your Quick Copy shows different versions or paths.
+const CLERK_UI_SCRIPT_URL = `https://${CLERK_FRONTEND_API_URL}/npm/@clerk/clerk-js@5/dist/clerk-ui.browser.js`;
+const CLERK_CORE_SCRIPT_URL = `https://${CLERK_FRONTEND_API_URL}/npm/@clerk/clerk-js@5/dist/clerk.browser.js`;
+
+async function loadScript(src, attributes = {}) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.crossOrigin = 'anonymous';
+    for (const [key, value] of Object.entries(attributes)) {
+      script.setAttribute(key, value);
+    }
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+    document.body.appendChild(script);
+  });
+}
 
 async function initClerk() {
   if (!CLERK_PUBLISHABLE_KEY || CLERK_PUBLISHABLE_KEY === 'pk_test_YOUR_CLERK_PUBLISHABLE_KEY_HERE') {
-    console.error('Clerk Publishable Key is missing! Please configure it in auth.js.');
-    const authActions = document.getElementById('auth-actions');
-    if (authActions) authActions.style.display = 'flex';
-    return; // Stop initialization because SDK will crash without a valid key
+    console.error('Clerk Publishable Key is missing! Live authentication testing is blocked.');
+    showFallbackButtons();
+    return;
   }
 
-  const script = document.createElement('script');
-  // Loading the latest official SDK version as per Clerk documentation
-  script.src = 'https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js';
-  script.setAttribute('data-clerk-publishable-key', CLERK_PUBLISHABLE_KEY);
-  script.crossOrigin = 'anonymous';
-  
-  script.onload = async () => {
-    try {
-      await window.Clerk.load();
-      updateNavigation();
-      mountClerkComponents();
-    } catch (err) {
-      console.error('Error initializing Clerk: ', err);
-      // Fallback: show the buttons even if Clerk fails to load properly
-      const authActions = document.getElementById('auth-actions');
-      if (authActions) authActions.style.display = 'flex';
-    }
-  };
-  document.body.appendChild(script);
+  if (!CLERK_FRONTEND_API_URL || CLERK_FRONTEND_API_URL === 'YOUR_FRONTEND_API_URL_HERE') {
+    console.error('Clerk Frontend API URL is missing! Live authentication testing is blocked.');
+    showFallbackButtons();
+    return;
+  }
+
+  try {
+    // Load the Clerk UI bundle FIRST as per the new official Javascript Quickstart
+    await loadScript(CLERK_UI_SCRIPT_URL);
+    
+    // Load the Clerk core JS SDK NEXT
+    await loadScript(CLERK_CORE_SCRIPT_URL, {
+      'data-clerk-publishable-key': CLERK_PUBLISHABLE_KEY
+    });
+
+    // Initialize Clerk using the documented UI configuration
+    await window.Clerk.load({
+      ui: {
+        ClerkUI: window.__internal_ClerkUICtor
+      }
+    });
+
+    updateNavigation();
+    mountClerkComponents();
+  } catch (err) {
+    console.error('Error initializing Clerk: ', err);
+    showFallbackButtons();
+  }
+}
+
+function showFallbackButtons() {
+  const authActions = document.getElementById('auth-actions');
+  if (authActions) authActions.style.display = 'flex';
 }
 
 function updateNavigation() {
@@ -42,18 +74,16 @@ function updateNavigation() {
   const isDashboard = window.location.pathname.includes('dashboard.html');
   const isAuthPage = window.location.pathname.includes('sign-in.html') || window.location.pathname.includes('sign-up.html');
 
-  if (window.Clerk.user) {
+  if (window.Clerk && window.Clerk.user) {
     // === SIGNED IN STATE ===
     if (authActions) authActions.style.display = 'none';
     
     if (userButtonMount && !userButtonMount.hasChildNodes()) {
-      // Create a container for signed-in actions
       const signedInContainer = document.createElement('div');
       signedInContainer.style.display = 'flex';
       signedInContainer.style.alignItems = 'center';
       signedInContainer.style.gap = '16px';
       
-      // Add Dashboard link if not already on dashboard
       if (!isDashboard) {
         const dashboardLink = document.createElement('a');
         dashboardLink.href = 'dashboard.html';
@@ -62,7 +92,6 @@ function updateNavigation() {
         signedInContainer.appendChild(dashboardLink);
       }
       
-      // Mount UserButton
       const userButtonDiv = document.createElement('div');
       signedInContainer.appendChild(userButtonDiv);
       userButtonMount.appendChild(signedInContainer);
@@ -72,7 +101,6 @@ function updateNavigation() {
       });
     }
 
-    // Redirect signed-in users away from auth pages
     if (isAuthPage) {
       window.location.href = 'dashboard.html';
     }
@@ -81,13 +109,13 @@ function updateNavigation() {
     if (isDashboard) {
       window.location.href = 'sign-in.html';
     }
-    if (authActions) authActions.style.display = 'flex'; // show login/signup
+    showFallbackButtons();
   }
 }
 
 function mountClerkComponents() {
   const signInDiv = document.getElementById('sign-in-app');
-  if (signInDiv) {
+  if (signInDiv && window.Clerk) {
     window.Clerk.mountSignIn(signInDiv, { 
       routing: 'hash', 
       signUpUrl: 'sign-up.html',
@@ -96,7 +124,7 @@ function mountClerkComponents() {
   }
   
   const signUpDiv = document.getElementById('sign-up-app');
-  if (signUpDiv) {
+  if (signUpDiv && window.Clerk) {
     window.Clerk.mountSignUp(signUpDiv, { 
       routing: 'hash', 
       signInUrl: 'sign-in.html',
