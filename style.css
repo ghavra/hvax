@@ -1713,3 +1713,34 @@ img, svg { display: block; }
   font-weight: 600;
   border: 1px solid rgba(217, 119, 87, 0.3);
 }
+
+
+/* ── Dark Mode Theme ───────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:          #f8f9fb;
+    --ink-muted:    #cbd5e1;
+    --ink-subtle:   #94a3b8;
+    --surface:      #0a0c10;
+    --surface-2:    #111827;
+    --surface-3:    #1f2937;
+    --border:       #334155;
+    --border-light: #1e293b;
+    --accent-glow:  rgba(26, 86, 219, 0.3);
+  }
+  
+  .logo-light { display: none !important; }
+  .logo-dark { display: block !important; }
+  
+  /* UI Tweaks for Dark Mode */
+  .nav { background: rgba(10, 12, 16, 0.9) !important; border-bottom-color: var(--border-light) !important; }
+  .footer { background: var(--surface-2) !important; border-top-color: var(--border-light) !important; }
+  .btn--ghost { color: var(--ink); border-color: var(--border); }
+  .btn--ghost:hover { background: var(--surface-3); }
+  
+  /* Soften harsh white backgrounds on any specific hardcoded elements */
+  .pipeline-card, .review-card, .pricing-card, .testimonial-card, .dash-card {
+    background: var(--surface);
+    border-color: var(--border);
+  }
+}
