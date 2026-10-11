@@ -226,7 +226,7 @@
                 <tr>
                   <td>BidEyes → Anthropic</td>
                   <td>Page-level text segments filtered by topic — never the full document in a single request</td>
-                  <td>TLS 1.3, Anthropic commercial API (zero-retention)</td>
+                  <td>TLS 1.3, Anthropic commercial API (standard 30-day abuse monitoring retention)</td>
                 </tr>
                 <tr>
                   <td>Anthropic → BidEyes</td>
@@ -243,7 +243,7 @@
 
             <div class="docs-callout docs-callout--info">
               <strong>Third-party services that touch your data</strong>
-              <p style="margin-top: 4px;">Only one: <strong>Anthropic</strong> (Claude API). BidEyes does not send your documents to OpenAI, Google, or any other LLM provider. We use Anthropic's commercial API tier, which does not use customer inputs for model training. See <a href="https://www.anthropic.com/policies/privacy" style="color: var(--accent);" target="_blank" rel="noopener">Anthropic's data usage policy</a>.</p>
+              <p style="margin-top: 4px;">Primary subprocessor: <strong>Anthropic</strong> (Claude API) for document analysis, alongside Clerk for user authentication. BidEyes does not send your documents to OpenAI, Google, or any other LLM provider. We use Anthropic's commercial API tier, which does not use customer inputs for model training. See <a href="https://www.anthropic.com/policies/privacy" style="color: var(--accent);" target="_blank" rel="noopener">Anthropic's data usage policy</a>.</p>
             </div>
           </div>
 

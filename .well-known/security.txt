@@ -1,0 +1,5 @@
+Contact: mailto:support@hvax.dev
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://hvax.dev/.well-known/security.txt
+Policy: https://hvax.dev/security.html
