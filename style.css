@@ -1,5 +1,5 @@
 /* =====================================================
-   HVAX — BidEyes Landing Page  v2
+   HVAX — HVAX Landing Page  v2
    style.css
    ===================================================== */
 
@@ -834,7 +834,7 @@ img, svg { display: block; }
   height: 10px;
 }
 
-/* ── What BidEyes Finds ────────────────────────────── */
+/* ── What HVAX Finds ────────────────────────────── */
 .finds {
   background: var(--surface);
 }

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Technical documentation for BidEyes: architecture, Claude integration, data flow, structured output schema, and execution bounds.">
-  <title>Documentation | BidEyes</title>
-  <meta property="og:title" content="Documentation | BidEyes" />
-  <meta property="og:description" content="Technical documentation for BidEyes: architecture, Claude integration, data flow, structured output schema, and execution bounds." />
+  <meta name="description" content="Technical documentation for HVAX: architecture, Claude integration, data flow, structured output schema, and execution bounds.">
+  <title>Documentation | HVAX</title>
+  <meta property="og:title" content="Documentation | HVAX" />
+  <meta property="og:description" content="Technical documentation for HVAX: architecture, Claude integration, data flow, structured output schema, and execution bounds." />
   <meta property="og:image" content="https://hvax.dev/og-image.png" />
-  <meta property="og:site_name" content="BidEyes" />
+  <meta property="og:site_name" content="HVAX" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -63,9 +63,9 @@
   <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="container">
       <div class="nav__inner">
-        <a href="index.html" class="nav__logo" style="display: flex; align-items: center; text-decoration: none;">
-          <img src="assets/brand-light.png" class="logo-light" alt="BidEyes Logo" style="height: 36px; width: auto; object-fit: contain; margin-top: 4px;" />
-          <img src="assets/brand-dark.png" class="logo-dark" alt="BidEyes Logo" style="height: 36px; width: auto; object-fit: contain; display: none; margin-top: 4px;" />
+        <a href="index.html" class="nav__logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="assets/logo.png" alt="HVAX Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 8px; box-shadow: 0 2px 8px rgba(26,86,219,0.25);" />
+          <span style="font-size: 1.35rem; font-weight: 800; color: var(--ink); letter-spacing: -0.03em;">HVAX</span>
         </a>
         <ul class="nav__links" role="list">
           <li><a href="how-it-works.html">How it works</a></li>
@@ -95,7 +95,7 @@
           <span style="color: var(--ink-subtle); font-size: var(--text-sm);">Last updated: October 2026</span>
         </div>
         <h1 class="sec-title" style="margin-bottom: var(--s-2);">Architecture &amp; Integration</h1>
-        <p style="color: var(--ink-muted); font-size: var(--text-lg); max-width: 700px;">How BidEyes processes your bid documents, integrates with the Anthropic Claude API, structures its outputs, and enforces execution bounds.</p>
+        <p style="color: var(--ink-muted); font-size: var(--text-lg); max-width: 700px;">How HVAX processes your bid documents, integrates with the Anthropic Claude API, structures its outputs, and enforces execution bounds.</p>
       </div>
 
       <!-- Layout: Sidebar + Content -->
@@ -123,7 +123,7 @@
           <!-- 1. System Overview -->
           <div id="overview" class="docs-section" style="margin-bottom: var(--s-10);">
             <h2 class="docs-h2">System Overview</h2>
-            <p class="docs-p">BidEyes is a risk-extraction pipeline purpose-built for commercial electrical bid packages. It ingests MEP project manuals (specifications), construction drawings, and addenda, then systematically cross-references them to surface scope gaps, specification conflicts, and missing coordination items before the bid deadline.</p>
+            <p class="docs-p">HVAX is a risk-extraction pipeline purpose-built for commercial electrical bid packages. It ingests MEP project manuals (specifications), construction drawings, and addenda, then systematically cross-references them to surface scope gaps, specification conflicts, and missing coordination items before the bid deadline.</p>
             <p class="docs-p">The system is <strong>not</strong> a general-purpose chatbot, a takeoff tool, or an estimating calculator. It does one thing: find what the estimator might miss in a 900-page document set, and cite the exact source page.</p>
             
             <h3 class="docs-h3">Core components</h3>
@@ -174,7 +174,7 @@
           <!-- 2. Data Flow -->
           <div id="data-flow" class="docs-section" style="margin-bottom: var(--s-10);">
             <h2 class="docs-h2">Data Flow</h2>
-            <p class="docs-p">Your bid documents flow through a strict, linear pipeline. At no point does your data leave BidEyes's own infrastructure except for structured API calls to Anthropic.</p>
+            <p class="docs-p">Your bid documents flow through a strict, linear pipeline. At no point does your data leave HVAX's own infrastructure except for structured API calls to Anthropic.</p>
 
             <div class="docs-flow">
               <div class="docs-flow__node">
@@ -183,7 +183,7 @@
               </div>
               <span class="docs-flow__arrow">→</span>
               <div class="docs-flow__node">
-                <strong>BidEyes Server</strong>
+                <strong>HVAX Server</strong>
                 <span>Parse &amp; segment</span>
               </div>
               <span class="docs-flow__arrow">→</span>
@@ -193,7 +193,7 @@
               </div>
               <span class="docs-flow__arrow">→</span>
               <div class="docs-flow__node">
-                <strong>BidEyes Server</strong>
+                <strong>HVAX Server</strong>
                 <span>Validate JSON</span>
               </div>
               <span class="docs-flow__arrow">→</span>
@@ -219,22 +219,22 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Browser → BidEyes</td>
+                  <td>Browser → HVAX</td>
                   <td>Raw PDF files</td>
                   <td>TLS 1.3 in transit, AES-256 at rest</td>
                 </tr>
                 <tr>
-                  <td>BidEyes → Anthropic</td>
+                  <td>HVAX → Anthropic</td>
                   <td>Page-level text segments filtered by topic — never the full document in a single request</td>
                   <td>TLS 1.3, Anthropic commercial API (standard 30-day abuse monitoring retention)</td>
                 </tr>
                 <tr>
-                  <td>Anthropic → BidEyes</td>
+                  <td>Anthropic → HVAX</td>
                   <td>Structured JSON findings with citations</td>
                   <td>TLS 1.3</td>
                 </tr>
                 <tr>
-                  <td>BidEyes → Browser</td>
+                  <td>HVAX → Browser</td>
                   <td>Final risk report (HTML dashboard)</td>
                   <td>TLS 1.3</td>
                 </tr>
@@ -243,7 +243,7 @@
 
             <div class="docs-callout docs-callout--info">
               <strong>Third-party services that touch your data</strong>
-              <p style="margin-top: 4px;">Primary subprocessor: <strong>Anthropic</strong> (Claude API) for document analysis, alongside Clerk for user authentication. BidEyes does not send your documents to OpenAI, Google, or any other LLM provider. We use Anthropic's commercial API tier, which does not use customer inputs for model training. See <a href="https://www.anthropic.com/policies/privacy" style="color: var(--accent);" target="_blank" rel="noopener">Anthropic's data usage policy</a>.</p>
+              <p style="margin-top: 4px;">Primary subprocessor: <strong>Anthropic</strong> (Claude API) for document analysis, alongside Clerk for user authentication. HVAX does not send your documents to OpenAI, Google, or any other LLM provider. We use Anthropic's commercial API tier, which does not use customer inputs for model training. See <a href="https://www.anthropic.com/policies/privacy" style="color: var(--accent);" target="_blank" rel="noopener">Anthropic's data usage policy</a>.</p>
             </div>
           </div>
 
@@ -251,7 +251,7 @@
           <!-- 3. Claude Integration -->
           <div id="claude" class="docs-section" style="margin-bottom: var(--s-10);">
             <h2 class="docs-h2">Claude Integration</h2>
-            <p class="docs-p">BidEyes uses the Anthropic Messages API to make structured, topic-scoped requests against your bid package. Here is exactly how:</p>
+            <p class="docs-p">HVAX uses the Anthropic Messages API to make structured, topic-scoped requests against your bid package. Here is exactly how:</p>
 
             <h3 class="docs-h3">Model selection</h3>
             <table class="docs-table">
@@ -307,7 +307,7 @@
 
             <div class="docs-callout docs-callout--warn">
               <strong>Model training</strong>
-              <p style="margin-top: 4px;">BidEyes uses Anthropic's commercial API. Under <a href="https://www.anthropic.com/policies/privacy" style="color: var(--accent);" target="_blank" rel="noopener">Anthropic's commercial terms</a>, inputs and outputs from the API are <strong>not used to train Anthropic's models</strong>. BidEyes does not fine-tune, distill, or train any model on your bid data.</p>
+              <p style="margin-top: 4px;">HVAX uses Anthropic's commercial API. Under <a href="https://www.anthropic.com/policies/privacy" style="color: var(--accent);" target="_blank" rel="noopener">Anthropic's commercial terms</a>, inputs and outputs from the API are <strong>not used to train Anthropic's models</strong>. HVAX does not fine-tune, distill, or train any model on your bid data.</p>
             </div>
           </div>
 
@@ -315,7 +315,7 @@
           <!-- 4. Output Schema -->
           <div id="schema" class="docs-section" style="margin-bottom: var(--s-10);">
             <h2 class="docs-h2">Output Schema</h2>
-            <p class="docs-p">Every finding produced by BidEyes conforms to a strict JSON schema. This ensures consistency, traceability, and machine-readability across reports.</p>
+            <p class="docs-p">Every finding produced by HVAX conforms to a strict JSON schema. This ensures consistency, traceability, and machine-readability across reports.</p>
 
             <div class="docs-codeblock"><span class="ck">// Finding schema (JSON)</span>
 {
@@ -382,7 +382,7 @@
           <!-- 5. Execution Bounds -->
           <div id="execution-bounds" class="docs-section" style="margin-bottom: var(--s-10);">
             <h2 class="docs-h2">Execution Bounds</h2>
-            <p class="docs-p">BidEyes operates within strict, documented boundaries. These are not theoretical limits — they are hard constraints enforced in code.</p>
+            <p class="docs-p">HVAX operates within strict, documented boundaries. These are not theoretical limits — they are hard constraints enforced in code.</p>
 
             <table class="docs-table">
               <thead>
@@ -439,7 +439,7 @@
 
             <div class="docs-callout docs-callout--info">
               <strong>Zero client-side analytics</strong>
-              <p style="margin-top: 4px;">BidEyes does not load Google Analytics, Meta Pixel, Hotjar, Mixpanel, Amplitude, or any other third-party tracking script on the marketing website or inside the product dashboard.</p>
+              <p style="margin-top: 4px;">HVAX does not load Google Analytics, Meta Pixel, Hotjar, Mixpanel, Amplitude, or any other third-party tracking script on the marketing website or inside the product dashboard.</p>
             </div>
 
             <h3 class="docs-h3">What we collect and why</h3>
@@ -466,12 +466,12 @@
           <!-- 7. Known Limits -->
           <div id="limits" class="docs-section" style="margin-bottom: var(--s-10);">
             <h2 class="docs-h2">Known Limits</h2>
-            <p class="docs-p">BidEyes is a research and extraction tool, not an estimator, code consultant, or contractual advisor. These are the things it explicitly does <strong>not</strong> do:</p>
+            <p class="docs-p">HVAX is a research and extraction tool, not an estimator, code consultant, or contractual advisor. These are the things it explicitly does <strong>not</strong> do:</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--s-4); margin-bottom: var(--s-6);">
               <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-md); padding: var(--s-4);">
                 <p style="font-weight: 600; color: var(--danger); font-size: var(--text-sm); margin-bottom: 4px;">✗ Not a takeoff tool</p>
-                <p style="color: var(--ink-muted); font-size: var(--text-sm); line-height: 1.5;">BidEyes does not count fixtures, measure conduit runs, or produce quantity estimates.</p>
+                <p style="color: var(--ink-muted); font-size: var(--text-sm); line-height: 1.5;">HVAX does not count fixtures, measure conduit runs, or produce quantity estimates.</p>
               </div>
               <div style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--r-md); padding: var(--s-4);">
                 <p style="font-weight: 600; color: var(--danger); font-size: var(--text-sm); margin-bottom: 4px;">✗ Not a code checker</p>
@@ -496,8 +496,8 @@
             </div>
 
             <div class="docs-callout docs-callout--red">
-              <strong>Do not bid solely based on a BidEyes report</strong>
-              <p style="margin-top: 4px;">BidEyes surfaces <em>potential</em> issues. It does not guarantee completeness. Your estimator must independently verify every finding against the original documents before incorporating it into a bid price. See our <a href="terms.html" style="color: var(--accent);">Terms of Service</a> for full liability limitations.</p>
+              <strong>Do not bid solely based on a HVAX report</strong>
+              <p style="margin-top: 4px;">HVAX surfaces <em>potential</em> issues. It does not guarantee completeness. Your estimator must independently verify every finding against the original documents before incorporating it into a bid price. See our <a href="terms.html" style="color: var(--accent);">Terms of Service</a> for full liability limitations.</p>
             </div>
           </div>
 
@@ -505,7 +505,7 @@
           <!-- 8. Human Governance -->
           <div id="governance" class="docs-section" style="margin-bottom: var(--s-10);">
             <h2 class="docs-h2">Human Governance</h2>
-            <p class="docs-p">BidEyes is designed as a human-in-the-loop system. AI handles evidence extraction at scale; humans handle judgment.</p>
+            <p class="docs-p">HVAX is designed as a human-in-the-loop system. AI handles evidence extraction at scale; humans handle judgment.</p>
 
             <table class="docs-table">
               <thead>
@@ -539,7 +539,7 @@
               </tbody>
             </table>
 
-            <p class="docs-p" style="margin-top: var(--s-4);">This is a deliberate design choice. The most dangerous failure mode in AI-assisted estimating is <em>false confidence</em> — an estimator trusting a finding without checking the source. BidEyes mitigates this by making the citation the centerpiece of every finding, not the AI's conclusion.</p>
+            <p class="docs-p" style="margin-top: var(--s-4);">This is a deliberate design choice. The most dangerous failure mode in AI-assisted estimating is <em>false confidence</em> — an estimator trusting a finding without checking the source. HVAX mitigates this by making the citation the centerpiece of every finding, not the AI's conclusion.</p>
           </div>
 
 
@@ -560,7 +560,7 @@
   <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
     <div class="container">
       <div style="display: flex; flex-direction: column; gap: var(--s-4); color: var(--ink-muted); font-size: var(--text-sm);">
-        <p>BidEyes is built and operated by HVAX, a sole proprietorship owned by Raghav Sharma. Founded March 2026. India Habitat Centre, Lodhi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
+        <p>HVAX is a sole proprietorship owned by Raghav Sharma. Founded March 2026. India Habitat Centre, Lodhi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
         <div style="display: flex; gap: var(--s-4); flex-wrap: wrap;">
           <a href="mailto:support@hvax.dev" style="color: var(--accent);">support@hvax.dev</a>
           <a href="privacy.html" style="color: var(--accent);">Privacy</a>

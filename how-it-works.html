@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO & Meta Tags -->
-  <title>How BidEyes works | Pre-bid risk review</title>
-  <meta name="description" content="How BidEyes reads your drawings, specs and addenda, compares them, and returns findings with a citation to the exact page. Every finding is reviewed by a person.">
+  <title>How HVAX works | Pre-bid risk review</title>
+  <meta name="description" content="How HVAX reads your drawings, specs and addenda, compares them, and returns findings with a citation to the exact page. Every finding is reviewed by a person.">
   <link rel="canonical" href="https://hvax.dev" />
   <meta name="robots" content="index, follow" />
   
   <!-- Open Graph -->
-  <meta property="og:title" content="BidEyes: Pre-bid risk review for electrical subcontractors" />
-  <meta property="og:description" content="BidEyes reviews your drawings, specs and addenda before you bid and flags potential scope gaps and conflicts, each with a page citation." />
+  <meta property="og:title" content="HVAX: Pre-bid risk review for electrical subcontractors" />
+  <meta property="og:description" content="HVAX reviews your drawings, specs and addenda before you bid and flags potential scope gaps and conflicts, each with a page citation." />
   <meta property="og:image" content="https://hvax.dev/og-image.png" />
-  <meta property="og:site_name" content="BidEyes" />
+  <meta property="og:site_name" content="HVAX" />
   <meta property="og:url" content="https://hvax.dev" />
   <meta name="twitter:card" content="summary_large_image" />
   
@@ -28,7 +28,7 @@
     {
       "@type": "SoftwareApplication",
       "@id": "https://hvax.dev/#software",
-      "name": "BidEyes",
+      "name": "HVAX",
       "url": "https://hvax.dev",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
@@ -58,7 +58,7 @@
       "@type": "WebSite",
       "@id": "https://hvax.dev/#website",
       "url": "https://hvax.dev",
-      "name": "BidEyes",
+      "name": "HVAX",
       "publisher": {
         "@type": "Organization",
         "name": "HVAX"
@@ -80,9 +80,9 @@
 <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="container">
       <div class="nav__inner">
-        <a href="index.html" class="nav__logo" style="display: flex; align-items: center; text-decoration: none;">
-          <img src="assets/brand-light.png" class="logo-light" alt="BidEyes Logo" style="height: 36px; width: auto; object-fit: contain; margin-top: 4px;" />
-          <img src="assets/brand-dark.png" class="logo-dark" alt="BidEyes Logo" style="height: 36px; width: auto; object-fit: contain; display: none; margin-top: 4px;" />
+        <a href="index.html" class="nav__logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="assets/logo.png" alt="HVAX Logo" style="width: 34px; height: 34px; object-fit: contain; border-radius: 8px; box-shadow: 0 2px 8px rgba(26,86,219,0.25);" />
+          <span style="font-size: 1.35rem; font-weight: 800; color: var(--ink); letter-spacing: -0.03em;">HVAX</span>
         </a>
         <ul class="nav__links" role="list">
           <li><a href="how-it-works.html">How it works</a></li>
@@ -167,8 +167,8 @@
 @container (max-width:420px){.bhw__two{grid-template-columns:1fr}}
 </style>
 
-<section class="bhw" aria-label="How BidEyes works" style="padding-top: var(--s-10); margin-bottom: var(--s-10);">
-  <h2 class="bhw__title">How BidEyes works</h2>
+<section class="bhw" aria-label="How HVAX works" style="padding-top: var(--s-10); margin-bottom: var(--s-10);">
+  <h2 class="bhw__title">How HVAX works</h2>
   <p class="bhw__lede">Six steps take your bid package from raw PDFs to a review your estimator can check line by line.</p>
 
   <ul class="bhw__io">
@@ -240,7 +240,7 @@
       <div>
         <h3 class="bhw__h">Claude reviews the evidence</h3>
         <p class="bhw__who">Claude API from Anthropic</p>
-        <p class="bhw__p">BidEyes uses the Claude API from Anthropic in three roles. A fast Claude model sorts and classifies the candidates. A stronger Claude model reads each evidence set side by side (drawings, specs and addenda) and decides whether they conflict, leave scope unclear, or change the price. It then drafts the finding. Claude must return every finding with an exact quote and a page reference. A finding without evidence is not allowed.</p>
+        <p class="bhw__p">HVAX uses the Claude API from Anthropic in three roles. A fast Claude model sorts and classifies the candidates. A stronger Claude model reads each evidence set side by side (drawings, specs and addenda) and decides whether they conflict, leave scope unclear, or change the price. It then drafts the finding. Claude must return every finding with an exact quote and a page reference. A finding without evidence is not allowed.</p>
         <p class="bhw__out"><b>Output:</b> draft findings with quote and page</p>
       </div>
       <div class="bhw__vis" aria-label="Three Claude roles">
@@ -297,7 +297,7 @@
     <li class="bhw__chip bhw__chip--out">Pre-bid control sheet</li><li class="bhw__chip bhw__chip--out">Addenda delta page</li><li class="bhw__chip bhw__chip--out">RFI-ready questions</li><li class="bhw__chip bhw__chip--out">A citation on every finding</li>
   </ul>
 
-  <p class="bhw__note" style="margin-bottom: var(--s-10);">BidEyes uses AI to extract evidence and draft findings. AI assists with evidence extraction and drafting. It does not replace estimating judgment, code review, or contractual advice.</p>
+  <p class="bhw__note" style="margin-bottom: var(--s-10);">HVAX uses AI to extract evidence and draft findings. AI assists with evidence extraction and drafting. It does not replace estimating judgment, code review, or contractual advice.</p>
 </section>
 
 <section class="sec" style="padding-bottom: var(--s-10);">
@@ -363,7 +363,7 @@
           </tr>
           <tr style="border-bottom: 1px solid var(--border-light);">
             <th style="padding: var(--s-3) 0; font-weight: 600; color: var(--ink-muted);">Account</th>
-            <td style="padding: var(--s-3) 0;">BidEyes's own commercial Anthropic API account.</td>
+            <td style="padding: var(--s-3) 0;">HVAX's own commercial Anthropic API account.</td>
           </tr>
         </table>
       </div>
@@ -374,7 +374,7 @@
 <footer class="footer" role="contentinfo" style="border-top: 1px solid var(--border-light); padding: var(--s-8) 0; margin-top: var(--s-10); background: var(--surface-2);">
     <div class="container">
       <div style="display: flex; flex-direction: column; gap: var(--s-4); color: var(--ink-muted); font-size: var(--text-sm);">
-        <p>BidEyes is built and operated by HVAX, a sole proprietorship owned by Raghav Sharma. Founded March 2026. India Habitat Centre, Lodhi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
+        <p>HVAX is a sole proprietorship owned by Raghav Sharma. Founded March 2026. India Habitat Centre, Lodhi Road, New Delhi, Delhi &ndash; 110003, India. Jurisdiction: Delhi, India.</p>
         <div style="display: flex; gap: var(--s-4); flex-wrap: wrap;">
           <a href="mailto:support@hvax.dev" style="color: var(--accent);">support@hvax.dev</a>
           <a href="privacy.html" style="color: var(--accent);">Privacy</a>

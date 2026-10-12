@@ -1,5 +1,5 @@
 /* =====================================================
-   HVAX — BidEyes Landing Page  v2
+   HVAX — Landing Page  v2
    script.js
    ===================================================== */
 'use strict';
@@ -158,9 +158,9 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   }
 
   function buildMailto(d) {
-    const subject = `BidEyes Sample Review Request — ${d.company || 'New Request'}`;
+    const subject = `HVAX Sample Review Request — ${d.company || 'New Request'}`;
     const body =
-      `Hello,\n\nI'd like to request a sample BidEyes review.\n\n` +
+      `Hello,\n\nI'd like to request a sample HVAX review.\n\n` +
       `Name:    ${d.name    || ''}\n` +
       `Company: ${d.company || ''}\n` +
       `Email:   ${d.email   || ''}\n` +

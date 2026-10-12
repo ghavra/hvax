@@ -1,6 +1,6 @@
-# BidEyes
+# HVAX
 
-BidEyes is a pre-bid risk review pipeline for commercial electrical subcontractors. 
+HVAX is a pre-bid risk review pipeline for commercial electrical subcontractors. 
 It uses the Anthropic Claude API to cross-reference MEP specifications, drawings, and addenda.
 
 ## Core Features
